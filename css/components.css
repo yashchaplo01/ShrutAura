@@ -72,9 +72,27 @@
 }
 
 .btn--secondary-dark:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-  background-color: var(--color-accent-subtle);
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+  background-color: rgba(0,0,0,0.02);
+}
+
+.btn--outline-dark {
+  background-color: transparent;
+  color: var(--color-navy);
+  border: 1px solid var(--color-navy);
+  font-weight: var(--weight-medium);
+}
+
+.btn--outline-dark:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.btn--pill {
+  border-radius: var(--radius-full);
 }
 
 .btn--whatsapp {
@@ -124,6 +142,9 @@
   transition: all var(--transition-slow);
   position: relative;
   border: 1px solid var(--color-gray-100);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -549,7 +570,9 @@
   align-items: center;
   z-index: var(--z-nav);
   transition: all var(--transition-base);
-  background: transparent;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .navbar--scrolled {
@@ -574,8 +597,7 @@
   height: 40px;
   width: auto;
   flex-shrink: 0;
-  filter: brightness(0) invert(1);
-  transition: filter var(--transition-base);
+  /* Dark logo for light bg */
 }
 
 .navbar--scrolled .navbar__logo {
@@ -590,22 +612,22 @@
 
 .navbar__link {
   padding: var(--space-2) var(--space-4);
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: var(--weight-medium);
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-gray-700);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
   letter-spacing: 0.01em;
 }
 
 .navbar__link:hover {
-  color: var(--color-white);
-  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-navy);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .navbar__link--active {
-  color: var(--color-white);
-  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-navy);
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 /* Scrolled state: dark text on white bg */
@@ -633,10 +655,10 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: var(--space-2) var(--space-5);
+  padding: var(--space-3) var(--space-5);
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-full);
   transition: all var(--transition-base);
 }
 
@@ -688,7 +710,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--color-white);
+  background-color: var(--color-navy);
   border-radius: var(--radius-full);
   transition: all var(--transition-base);
 }
@@ -755,7 +777,7 @@
   align-items: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .navbar__links {
     display: none;
   }
@@ -767,5 +789,80 @@
   }
   .mobile-menu {
     display: flex;
+  }
+
+  /* ── Buttons mobile ── */
+  .btn {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+  }
+  .btn--lg {
+    padding: var(--space-4) var(--space-8);
+    font-size: var(--text-base);
+  }
+
+  /* ── Cards mobile ── */
+  .card {
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+  }
+  .card__icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-4);
+  }
+  .card__title {
+    font-size: var(--text-lg);
+  }
+  .card__text {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Timeline mobile ── */
+  .timeline__item {
+    padding-left: var(--space-10);
+    padding-bottom: var(--space-8);
+  }
+  .timeline__title {
+    font-size: var(--text-lg);
+  }
+  .timeline__text {
+    font-size: var(--text-sm);
+  }
+
+  /* ── Industry cards mobile ── */
+  .industry-card {
+    padding: var(--space-5);
+  }
+  .industry-card__icon {
+    width: 48px;
+    height: 48px;
+  }
+  .industry-card__title {
+    font-size: var(--text-base);
+  }
+
+  /* ── Insight cards mobile ── */
+  .insight-card__content {
+    padding: var(--space-5);
+  }
+  .insight-card__title {
+    font-size: var(--text-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-sm);
+    width: 100%;
+    justify-content: center;
+  }
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero__actions .btn {
+    width: 100%;
   }
 }
