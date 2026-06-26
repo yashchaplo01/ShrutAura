@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Specifically allowing AI crawlers to index our business for AI-driven search (e.g., Perplexity, ChatGPT Search)
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+Sitemap: https://shrutaura.com/sitemap.xml
