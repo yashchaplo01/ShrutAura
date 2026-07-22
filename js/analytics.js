@@ -76,15 +76,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /**
-   * 5. Service Inquiry (Clicking on Services or Insights)
+   * 5. Service Inquiry & FAQ Toggle Tracking
    */
-  const serviceCards = document.querySelectorAll('#services .card, .insight-card');
+  const serviceCards = document.querySelectorAll('#services .card');
   serviceCards.forEach(card => {
     card.addEventListener('click', () => {
       const titleEl = card.querySelector('h3');
       const serviceName = titleEl ? titleEl.innerText.trim() : 'Unknown Service';
       pushToDataLayer('service_inquiry', {
         service_name: serviceName
+      });
+    });
+  });
+
+  const faqTriggers = document.querySelectorAll('.faq-trigger');
+  faqTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const questionText = trigger.querySelector('.faq-question')?.innerText.trim() || 'FAQ Item';
+      pushToDataLayer('faq_interaction', {
+        question: questionText
       });
     });
   });

@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initActiveNav();
   initCounterAnimation();
+  initFAQAccordion();
 });
 
 /* ── Sticky Navbar with Glassmorphism ── */
@@ -195,4 +196,35 @@ function initCounterAnimation() {
   }, observerOptions);
 
   counters.forEach(counter => observer.observe(counter));
+}
+
+/* ── FAQ Accordion ── */
+function initFAQAccordion() {
+  const faqTriggers = document.querySelectorAll('.faq-trigger');
+  if (!faqTriggers.length) return;
+
+  faqTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+      // Close other open accordion items for a clean single-expanded view
+      document.querySelectorAll('.faq-item').forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('faq-item--active');
+          const otherTrigger = otherItem.querySelector('.faq-trigger');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current item
+      if (isExpanded) {
+        item.classList.remove('faq-item--active');
+        trigger.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('faq-item--active');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 }
