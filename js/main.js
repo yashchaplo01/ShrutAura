@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initActiveNav();
   initCounterAnimation();
   initFAQAccordion();
+  initContactForm();
 });
 
 /* ── Sticky Navbar with Glassmorphism ── */
@@ -227,4 +228,55 @@ function initFAQAccordion() {
       }
     });
   });
+}
+
+/* ── Contact Form (Web3Forms) ── */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const submitBtn = document.getElementById('contact-submit-btn');
+  const feedback = document.getElementById('contact-feedback');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Show loading state
+    submitBtn.classList.add('contact-form__submit-btn--loading');
+    submitBtn.disabled = true;
+    hideFeedback();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        showFeedback('success', '✓ Thank you! Your message has been sent successfully. We\'ll get back to you soon.');
+        form.reset();
+      } else {
+        showFeedback('error', '⚠ Something went wrong. Please try again or email us at contact@shrutaura.com');
+      }
+    } catch (error) {
+      showFeedback('error', '⚠ Network error. Please check your connection and try again.');
+    } finally {
+      submitBtn.classList.remove('contact-form__submit-btn--loading');
+      submitBtn.disabled = false;
+    }
+  });
+
+  function showFeedback(type, message) {
+    feedback.textContent = message;
+    feedback.className = 'contact-form__feedback contact-form__feedback--visible contact-form__feedback--' + type;
+  }
+
+  function hideFeedback() {
+    feedback.className = 'contact-form__feedback';
+    feedback.textContent = '';
+  }
 }
