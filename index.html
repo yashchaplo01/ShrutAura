@@ -68,6 +68,10 @@
   <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/animations.css">
 
+  <!-- Preload Critical Above-The-Fold Assets -->
+  <link rel="preload" as="image" href="assets/globe.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="Logo -BG-crop.webp" type="image/webp">
+
   <!-- Schema.org JSON-LD for SEO & AI Crawling -->
   <script type="application/ld+json">
   {
@@ -250,6 +254,33 @@
 
 <body>
 
+  <!-- Site Preloader -->
+  <div id="site-preloader" class="preloader" aria-hidden="false" role="status" aria-label="Loading ShrutAura Global">
+    <div class="preloader__inner">
+      <div class="preloader__brand">
+        <img src="Logo -BG-crop.webp" alt="ShrutAura Global" class="preloader__logo" width="185" height="40">
+        <div class="preloader__glow"></div>
+      </div>
+      <div class="preloader__bar">
+        <div class="preloader__bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <noscript>
+    <style>
+      #site-preloader {
+        display: none !important;
+      }
+
+      .hero__globe,
+      .smooth-img,
+      .blog-card__image,
+      .article-featured-image {
+        opacity: 1 !important;
+      }
+    </style>
+  </noscript>
 
   <!-- ════════════════════════════════════════ -->
   <!-- Navigation                              -->
@@ -257,7 +288,11 @@
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar__inner">
       <a href="#home" aria-label="ShrutAura Global — Home">
-        <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="navbar__logo" width="185" height="40">
+        <picture>
+          <source srcset="Logo -BG-crop.webp" type="image/webp">
+          <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="navbar__logo"
+            width="185" height="40">
+        </picture>
       </a>
 
       <div class="navbar__links">
@@ -274,7 +309,8 @@
 
 
       <!-- Mobile Toggle -->
-      <button class="navbar__toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="navbar__toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false"
+        aria-controls="mobile-menu">
         <span></span>
         <span></span>
         <span></span>
@@ -283,7 +319,15 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true"
+    aria-label="Mobile navigation">
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
     <a href="#home" class="mobile-menu__link">Home</a>
     <a href="#solutions" class="mobile-menu__link">Solutions</a>
     <a href="#services" class="mobile-menu__link">Services</a>
@@ -292,7 +336,6 @@
     <a href="#blog" class="mobile-menu__link">Blog</a>
     <a href="#faq" class="mobile-menu__link">FAQ</a>
     <a href="#contact" class="mobile-menu__link">Contact</a>
-
   </div>
 
   <main>
@@ -321,7 +364,7 @@
 
           <div class="hero__actions">
             <a href="#contact" class="btn btn--primary btn--lg btn--pill" id="hero-cta-discovery">
-              <span>Speak with our team</span>
+              <span>Start Your Free 40 Hours Pilot</span>
               <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -331,7 +374,11 @@
           </div>
         </div>
         <div class="hero__visual">
-          <img src="assets/globe.png" alt="Global finance operations and technology network - ShrutAura Global" class="hero__globe" width="800" height="800" fetchpriority="high">
+          <picture class="hero__globe-picture">
+            <source srcset="assets/globe.webp" type="image/webp">
+            <img src="assets/globe.png" alt="Global finance operations and technology network - ShrutAura Global"
+              class="hero__globe smooth-img" width="800" height="800" fetchpriority="high">
+          </picture>
         </div>
       </div>
 
@@ -365,37 +412,44 @@
         <div class="logo-grid reveal">
           <!-- QuickBooks -->
           <div class="logo-grid__item">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/quickbooks.svg" alt="Intuit QuickBooks Accounting Software" width="32" height="32" loading="lazy" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/quickbooks.svg"
+              alt="Intuit QuickBooks Accounting Software" width="32" height="32" loading="lazy" />
             <span>QuickBooks</span>
           </div>
           <!-- Xero -->
           <div class="logo-grid__item">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/xero.svg" alt="Xero Cloud Accounting Platform" width="32" height="32" loading="lazy" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/xero.svg" alt="Xero Cloud Accounting Platform"
+              width="32" height="32" loading="lazy" />
             <span>Xero</span>
           </div>
           <!-- SAP -->
           <div class="logo-grid__item">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/sap.svg" alt="SAP Enterprise Resource Planning" width="32" height="32" loading="lazy" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/sap.svg"
+              alt="SAP Enterprise Resource Planning" width="32" height="32" loading="lazy" />
             <span>SAP</span>
           </div>
           <!-- Zoho Books -->
           <div class="logo-grid__item">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/zoho.svg" alt="Zoho Books Cloud Accounting" width="32" height="32" loading="lazy" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/zoho.svg" alt="Zoho Books Cloud Accounting"
+              width="32" height="32" loading="lazy" />
             <span>Zoho Books</span>
           </div>
           <!-- Excel -->
           <div class="logo-grid__item">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftexcel.svg" alt="Microsoft Excel Financial Modeling" width="32" height="32" loading="lazy" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftexcel.svg"
+              alt="Microsoft Excel Financial Modeling" width="32" height="32" loading="lazy" />
             <span>Excel</span>
           </div>
           <!-- Power BI -->
           <div class="logo-grid__item">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/powerbi.svg" alt="Microsoft Power BI Financial Analytics" width="32" height="32" loading="lazy" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/powerbi.svg"
+              alt="Microsoft Power BI Financial Analytics" width="32" height="32" loading="lazy" />
             <span>Power BI</span>
           </div>
           <!-- Python -->
           <div class="logo-grid__item">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" alt="Python Financial Automation Scripting" width="32" height="32" loading="lazy" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg"
+              alt="Python Financial Automation Scripting" width="32" height="32" loading="lazy" />
             <span>Python</span>
           </div>
         </div>
@@ -787,7 +841,7 @@
                   <div class="about__stat-label">Countries</div>
                 </div>
                 <div class="about__stat">
-                  <div class="about__stat-number" data-count="50" data-suffix="+">0</div>
+                  <div class="about__stat-number" data-count="16" data-suffix="+">0</div>
                   <div class="about__stat-label">Clients</div>
                 </div>
                 <div class="about__stat">
@@ -814,7 +868,8 @@
           <p class="section-overline">Insights & Articles</p>
           <h2 class="section-title">Latest Financial Perspectives</h2>
           <p class="section-subtitle">
-            Expert playbooks, research, and practical strategies on modern accounting, AI integrations, and finance automation.
+            Expert playbooks, research, and practical strategies on modern accounting, AI integrations, and finance
+            automation.
           </p>
         </div>
 
@@ -822,7 +877,12 @@
           <!-- Article 1 -->
           <a href="blog-outsourced-accounting-guide.html" class="blog-card reveal">
             <div class="blog-card__image-wrap">
-              <img src="assets/blog_accounting.png" alt="Executive penthouse suite with floating transparent financial analytics display" class="blog-card__image" width="400" height="250" loading="lazy">
+              <picture>
+                <source srcset="assets/blog_accounting.webp" type="image/webp">
+                <img src="assets/blog_accounting.png"
+                  alt="Executive penthouse suite with floating transparent financial analytics display"
+                  class="blog-card__image smooth-img" width="400" height="250" loading="lazy">
+              </picture>
               <span class="blog-card__category">Accounting & CFO</span>
             </div>
             <div class="blog-card__body">
@@ -831,14 +891,17 @@
                 <span class="blog-card__meta-dot"></span>
                 <span>8 min read</span>
               </div>
-              <h3 class="blog-card__title">The Ultimate Guide to Outsourced Accounting & Fractional CFO Services in 2026</h3>
+              <h3 class="blog-card__title">The Ultimate Guide to Outsourced Accounting & Fractional CFO Services in 2026
+              </h3>
               <p class="blog-card__excerpt">
-                Discover how high-growth businesses and CPA firms leverage outsourced accounting and fractional CFO support to reduce overhead by 40-60%.
+                Discover how high-growth businesses and CPA firms leverage outsourced accounting and fractional CFO
+                support to reduce overhead by 40-60%.
               </p>
               <div class="blog-card__footer">
                 <span>Read Full Guide</span>
-                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
             </div>
@@ -847,7 +910,12 @@
           <!-- Article 2 -->
           <a href="blog-ai-in-finance-transformation.html" class="blog-card reveal">
             <div class="blog-card__image-wrap">
-              <img src="assets/blog_ai.png" alt="Abstract 3D optical glass ribbon with algorithmic financial data models" class="blog-card__image" width="400" height="250" loading="lazy">
+              <picture>
+                <source srcset="assets/blog_ai.webp" type="image/webp">
+                <img src="assets/blog_ai.png"
+                  alt="Abstract 3D optical glass ribbon with algorithmic financial data models"
+                  class="blog-card__image smooth-img" width="400" height="250" loading="lazy">
+              </picture>
               <span class="blog-card__category">AI & Technology</span>
             </div>
             <div class="blog-card__body">
@@ -856,14 +924,17 @@
                 <span class="blog-card__meta-dot"></span>
                 <span>7 min read</span>
               </div>
-              <h3 class="blog-card__title">The Future of AI in Finance: How Generative AI & Machine Learning Are Revolutionizing Accounting</h3>
+              <h3 class="blog-card__title">The Future of AI in Finance: How Generative AI & Machine Learning Are
+                Revolutionizing Accounting</h3>
               <p class="blog-card__excerpt">
-                Explore how artificial intelligence and machine learning are transforming corporate accounting, anomaly detection, and predictive forecasting.
+                Explore how artificial intelligence and machine learning are transforming corporate accounting, anomaly
+                detection, and predictive forecasting.
               </p>
               <div class="blog-card__footer">
                 <span>Read Full Guide</span>
-                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
             </div>
@@ -872,7 +943,12 @@
           <!-- Article 3 -->
           <a href="blog-finance-process-automation.html" class="blog-card reveal">
             <div class="blog-card__image-wrap">
-              <img src="assets/blog_automation.png" alt="Precision modular glass conduits and synchronized financial workflow architecture" class="blog-card__image" width="400" height="250" loading="lazy">
+              <picture>
+                <source srcset="assets/blog_automation.webp" type="image/webp">
+                <img src="assets/blog_automation.png"
+                  alt="Precision modular glass conduits and synchronized financial workflow architecture"
+                  class="blog-card__image smooth-img" width="400" height="250" loading="lazy">
+              </picture>
               <span class="blog-card__category">Automation</span>
             </div>
             <div class="blog-card__body">
@@ -881,14 +957,17 @@
                 <span class="blog-card__meta-dot"></span>
                 <span>6 min read</span>
               </div>
-              <h3 class="blog-card__title">Finance Process Automation: How to Eliminate 80% of Repetitive Accounting Tasks</h3>
+              <h3 class="blog-card__title">Finance Process Automation: How to Eliminate 80% of Repetitive Accounting
+                Tasks</h3>
               <p class="blog-card__excerpt">
-                Learn how to implement robotic process automation (RPA) and intelligent workflows across AP/AR, bank reconciliation, and multi-entity consolidation.
+                Learn how to implement robotic process automation (RPA) and intelligent workflows across AP/AR, bank
+                reconciliation, and multi-entity consolidation.
               </p>
               <div class="blog-card__footer">
                 <span>Read Full Guide</span>
-                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
             </div>
@@ -899,7 +978,9 @@
           <a href="blog.html" class="btn btn--secondary btn--pill" id="view-all-articles-btn">
             View All Insights & Playbooks
             <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18" style="margin-left: var(--space-2);">
-              <path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" />
+              <path fill-rule="evenodd"
+                d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                clip-rule="evenodd" />
             </svg>
           </a>
         </div>
@@ -1224,7 +1305,11 @@
       <div class="footer__grid">
         <!-- Brand Column -->
         <div class="footer__brand">
-          <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="footer__logo" width="167" height="36" loading="lazy">
+          <picture>
+            <source srcset="Logo -BG-crop.webp" type="image/webp">
+            <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology"
+              class="footer__logo" width="167" height="36" loading="lazy">
+          </picture>
           <p class="footer__tagline">Simplifying Finance with Technology.</p>
           <div class="footer__socials">
             <!-- LinkedIn -->
@@ -1286,8 +1371,10 @@
         <div>
           <h4 class="footer__column-title">Get in Touch</h4>
           <div class="footer__links">
-            <a href="https://maps.google.com/?q=Rajsamand,+Rajasthan,+India" target="_blank" rel="noopener" class="footer__link footer__link--address" title="Location: Rajsamand, Rajasthan, India">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer__link-icon" aria-hidden="true">
+            <a href="https://maps.google.com/?q=Rajsamand,+Rajasthan,+India" target="_blank" rel="noopener"
+              class="footer__link footer__link--address" title="Location: Rajsamand, Rajasthan, India">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="footer__link-icon" aria-hidden="true">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>

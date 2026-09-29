@@ -63,6 +63,8 @@
   <link rel="stylesheet" href="css/sections.css">
   <link rel="stylesheet" href="css/animations.css">
 
+  <link rel="preload" as="image" href="Logo -BG-crop.webp" type="image/webp">
+
   <!-- Schema.org Breadcrumb & WebPage -->
   <script type="application/ld+json">
   {
@@ -113,7 +115,10 @@
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar__inner">
       <a href="index.html#home" aria-label="ShrutAura Global — Home">
-        <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="navbar__logo" width="185" height="40">
+        <picture>
+          <source srcset="Logo -BG-crop.webp" type="image/webp">
+          <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="navbar__logo" width="185" height="40">
+        </picture>
       </a>
 
       <div class="navbar__links">
@@ -128,7 +133,7 @@
       </div>
 
       <!-- Mobile Toggle -->
-      <button class="navbar__toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="navbar__toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span></span>
         <span></span>
         <span></span>
@@ -137,7 +142,13 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
     <a href="index.html#home" class="mobile-menu__link">Home</a>
     <a href="index.html#solutions" class="mobile-menu__link">Solutions</a>
     <a href="index.html#services" class="mobile-menu__link">Services</a>
@@ -264,7 +275,10 @@
       <div class="footer__grid">
         <!-- Brand Column -->
         <div class="footer__brand">
-          <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="footer__logo" width="167" height="36" loading="lazy">
+          <picture>
+            <source srcset="Logo -BG-crop.webp" type="image/webp">
+            <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="footer__logo" width="167" height="36" loading="lazy">
+          </picture>
           <p class="footer__tagline">Simplifying Finance with Technology.</p>
           <div class="footer__socials">
             <!-- LinkedIn -->

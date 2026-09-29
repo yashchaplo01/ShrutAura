@@ -3,6 +3,8 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
+  initSmoothImages();
   initNavbar();
   initScrollReveal();
   initMobileMenu();
@@ -12,6 +14,62 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQAccordion();
   initContactForm();
 });
+
+// Run immediate checks if script executes after DOM elements are created
+initPreloader();
+initSmoothImages();
+
+/* ── Site Preloader ── */
+function initPreloader() {
+  const preloader = document.getElementById('site-preloader');
+  if (!preloader || preloader.dataset.initialized) return;
+  preloader.dataset.initialized = 'true';
+
+  let dismissed = false;
+
+  function dismiss() {
+    if (dismissed) return;
+    dismissed = true;
+    preloader.classList.add('preloader--hidden');
+    preloader.setAttribute('aria-hidden', 'true');
+    setTimeout(() => {
+      if (preloader.parentNode) {
+        preloader.remove();
+      }
+    }, 600);
+  }
+
+  if (document.readyState === 'complete') {
+    setTimeout(dismiss, 300);
+  } else {
+    window.addEventListener('load', () => {
+      setTimeout(dismiss, 250);
+    });
+  }
+
+  // Failsafe timeout: never lock the screen longer than 850ms
+  setTimeout(dismiss, 850);
+}
+
+/* ── Smooth Image Loading ── */
+function initSmoothImages() {
+  const images = document.querySelectorAll('.smooth-img, .hero__globe, .blog-card__image, .article-featured-image');
+
+  images.forEach((img) => {
+    const markLoaded = () => {
+      img.classList.add('is-loaded');
+      const wrap = img.closest('.blog-card__image-wrap');
+      if (wrap) wrap.classList.add('is-loaded');
+    };
+
+    if (img.complete && img.naturalWidth !== 0) {
+      markLoaded();
+    } else {
+      img.addEventListener('load', markLoaded, { once: true });
+      img.addEventListener('error', markLoaded, { once: true });
+    }
+  });
+}
 
 /* ── Sticky Navbar with Glassmorphism ── */
 function initNavbar() {
@@ -64,38 +122,64 @@ function initScrollReveal() {
 function initMobileMenu() {
   const toggle = document.querySelector('.navbar__toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
+  const closeBtn = document.querySelector('.mobile-menu__close');
   const mobileLinks = document.querySelectorAll('.mobile-menu__link');
   
   if (!toggle || !mobileMenu) return;
 
-  function closeMenu() {
+  function closeMenu(returnFocus = true) {
     toggle.classList.remove('navbar__toggle--active');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation menu');
     mobileMenu.classList.remove('mobile-menu--open');
+    mobileMenu.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (returnFocus) {
+      toggle.focus();
+    }
   }
 
   function openMenu() {
     toggle.classList.add('navbar__toggle--active');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close navigation menu');
     mobileMenu.classList.add('mobile-menu--open');
+    mobileMenu.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+
+    // Move focus inside the open modal dialog
+    if (closeBtn) {
+      closeBtn.focus();
+    } else if (mobileLinks.length > 0) {
+      mobileLinks[0].focus();
+    }
   }
 
   toggle.addEventListener('click', () => {
-    if (mobileMenu.classList.contains('mobile-menu--open')) {
-      closeMenu();
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+    if (isExpanded) {
+      closeMenu(true);
     } else {
       openMenu();
     }
   });
 
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      closeMenu(true);
+    });
+  }
+
   mobileLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', () => {
+      closeMenu(false);
+    });
   });
 
   // Close on escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileMenu.classList.contains('mobile-menu--open')) {
-      closeMenu();
+      closeMenu(true);
     }
   });
 }
