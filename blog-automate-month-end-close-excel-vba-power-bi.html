@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QDLMZSBLF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0QDLMZSBLF');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#0B0C1A">
+
+  <!-- Primary Meta Tags -->
+  <title>Automate Month-End Close: Cut Closing from 15 Days to 3 Days with Excel VBA & Power BI | ShrutAura</title>
+  <meta name="title" content="Automate Month-End Close: Cut Closing from 15 Days to 3 Days with Excel VBA & Power BI | ShrutAura">
+  <meta name="description" content="Cut your month-end close from 15 days to 3 days using Excel VBA macros and Power BI dashboards. Eliminate manual errors—start your Free 40-Hour Pilot today.">
+  <meta name="keywords" content="outsourced accounting, fractional CFO, accounting automation, Python accounting, QBO cleanup, CPA outsourcing, finance transformation">
+  <meta name="author" content="ShrutAura Global CA & Advisory Team">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://shrutaura.com/blog/automate-month-end-close-excel-vba-power-bi" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ShrutAura Global">
+  <meta property="og:url" content="https://shrutaura.com/blog/automate-month-end-close-excel-vba-power-bi">
+  <meta property="og:title" content="Automating Month-End Close: How to Cut Closing Time from 15 Days to 3 Days with Excel VBA & Power BI">
+  <meta property="og:description" content="Still closing the books on the 18th of the following month? Learn the exact Excel VBA and Power BI engineering playbook to achieve a 3-day month-end close without buying a $100k enterprise FP&A tool.">
+  <meta property="og:image" content="https://shrutaura.com/assets/blog_month_end_close.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="Three fluid luminescent ribbons of emerald green, amber gold, and purple violet converging across frosted glass tiers into a crystal reservoir">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-08-13T08:00:00+00:00">
+  <meta property="article:modified_time" content="2026-08-13T08:00:00+00:00">
+  <meta property="article:author" content="ShrutAura Global CA & Advisory Team">
+  <meta property="article:section" content="Month-End Close & BI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Automating Month-End Close: How to Cut Closing Time from 15 Days to 3 Days with Excel VBA & Power BI">
+  <meta name="twitter:description" content="Still closing the books on the 18th of the following month? Learn the exact Excel VBA and Power BI engineering playbook to achieve a 3-day month-end close without buying a $100k enterprise FP&A tool.">
+  <meta name="twitter:image" content="https://shrutaura.com/assets/blog_month_end_close.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/Favicon.png">
+  <link rel="apple-touch-icon" href="assets/Favicon.png">
+
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <link rel="preload" as="image" href="assets/blog_month_end_close.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="Logo -BG-crop.webp" type="image/webp">
+
+  <!-- Schema.org BlogPosting & FAQPage -->
+  <script type="application/ld+json">
+{
+
+  "@context": "https://schema.org",
+
+  "@graph": [
+
+    {
+
+      "@type": "Article",
+
+      "headline": "Automating Month-End Close: How to Cut Closing Time from 15 Days to 3 Days with Excel VBA & Power BI",
+
+      "description": "Cut your month-end close from 15 days to 3 days using Excel VBA macros and Power BI dashboards. Eliminate manual errors—start your Free 40-Hour Pilot today.",
+
+      "author": {
+
+        "@type": "Organization",
+
+        "name": "ShrutAura Global Private Limited",
+
+        "url": "https://shrutaura.com/"
+
+      },
+
+      "publisher": {
+
+        "@type": "Organization",
+
+        "name": "ShrutAura Global Private Limited",
+
+        "url": "https://shrutaura.com/"
+
+      },
+
+      "datePublished": "2026-08-13",
+
+      "dateModified": "2026-08-13",
+
+      "mainEntityOfPage": {
+
+        "@type": "WebPage",
+
+        "@id": "https://shrutaura.com/blog/automate-month-end-close-excel-vba-power-bi"
+
+      }
+
+    },
+
+    {
+
+      "@type": "FAQPage",
+
+      "mainEntity": [
+
+        {
+
+          "@type": "Question",
+
+          "name": "Why does the average SMB month-end close take 12 to 15 business days?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "Most finance teams lose 70% of their close cycle to manual spreadsheet mechanics: waiting until month-end to reconcile bank and processor accounts, manually updating fragile Excel schedules for prepaids, depreciation, and deferred revenue, consolidating multi-entity trial balances via VLOOKUP, and manually formatting board decks."
+
+          }
+
+        },
+
+        {
+
+          "@type": "Question",
+
+          "name": "Can we automate our month-end close with Excel VBA and Power BI instead of buying expensive close management software?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "Yes. Enterprise close tools like FloQast or BlackLine cost $25,000 to $80,000+ annually. For companies between $1M and $50M in revenue, custom Excel VBA macros combined with Power Query and a star-schema Power BI model automate 80% of recurring close schedules and reporting with zero recurring SaaS license bloat."
+
+          }
+
+        },
+
+        {
+
+          "@type": "Question",
+
+          "name": "Which month-end accounting tasks are best suited for Excel VBA automation?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "The highest-ROI candidates for Excel VBA automation include multi-entity trial balance normalization, automated Adjusting Journal Entry (AJE) CSV generation for prepaid amortization, fixed asset depreciation, payroll accrual allocation across departments, intercompany elimination matching, and automated balance-sheet lead schedule tie-outs."
+
+          }
+
+        },
+
+        {
+
+          "@type": "Question",
+
+          "name": "How does Power BI eliminate manual monthly management reporting?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "Once the general ledger is connected to a Power BI star-schema data model with DAX measures, finalizing the month-end close in QuickBooks, Xero, or your ERP automatically refreshes the P&L, Balance Sheet, 13-week cash flow, and budget-vs-actual variance commentary—reducing board deck preparation from 3 days to a single click."
+
+          }
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="index.html#home" aria-label="ShrutAura Global — Home">
+        <picture>
+          <source srcset="Logo -BG-crop.webp" type="image/webp">
+          <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="navbar__logo" width="185" height="40">
+        </picture>
+      </a>
+
+      <div class="navbar__links">
+        <a href="index.html#home" class="navbar__link">Home</a>
+        <a href="index.html#solutions" class="navbar__link">Solutions</a>
+        <a href="index.html#services" class="navbar__link">Services</a>
+        <a href="index.html#industries" class="navbar__link">Industries</a>
+        <a href="index.html#about" class="navbar__link">About</a>
+        <a href="blog.html" class="navbar__link navbar__link--active">Blog</a>
+        <a href="index.html#faq" class="navbar__link">FAQ</a>
+        <a href="index.html#contact" class="navbar__link">Contact</a>
+      </div>
+
+      <button class="navbar__toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <a href="index.html#home" class="mobile-menu__link">Home</a>
+    <a href="index.html#solutions" class="mobile-menu__link">Solutions</a>
+    <a href="index.html#services" class="mobile-menu__link">Services</a>
+    <a href="index.html#industries" class="mobile-menu__link">Industries</a>
+    <a href="index.html#about" class="mobile-menu__link">About</a>
+    <a href="blog.html" class="mobile-menu__link">Blog</a>
+    <a href="index.html#faq" class="mobile-menu__link">FAQ</a>
+    <a href="index.html#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <main>
+    <!-- Article Hero -->
+    <header class="article-hero">
+      <div class="container article-hero__inner">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+          <a href="blog.html">Blog</a>
+          <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+          <span class="breadcrumbs__current" aria-current="page">Automating Month-End Close</span>
+        </nav>
+
+        <span class="article-badge">Month-End Close & BI</span>
+        <h1 class="article-title">Automating Month-End Close: How to Cut Closing Time from 15 Days to 3 Days with Excel VBA & Power BI</h1>
+
+        <div class="article-meta">
+                    <div class="article-author">
+            <div class="article-author__avatar">
+              <picture>
+                <source srcset="assets/profile.webp" type="image/webp">
+                <img src="assets/profile.png" alt="CA Yash Chaplot" class="article-author__avatar-img" width="44" height="44" loading="lazy">
+              </picture>
+            </div>
+            <div class="article-author__info">
+              <span class="article-author__name">CA Yash Chaplot</span>
+              <span class="article-author__badge">Chartered Accountant & Founder</span>
+            </div>
+          </div>
+          <span aria-hidden="true">&bull;</span>
+          <span class="article-meta__item">
+            <span class="article-meta__label">Published:</span>
+            <time datetime="2026-08-13">August 13, 2026</time>
+          </span>
+          <span aria-hidden="true">&bull;</span>
+          <span>10 min read</span>
+        </div>
+
+        <picture>
+          <source srcset="assets/blog_month_end_close.webp" type="image/webp">
+          <img src="assets/blog_month_end_close.png"
+            alt="Precision architectural 3D chronometer of dark smoked quartz and titanium with concentric gyroscopic rings completing an accelerated loop"
+            class="article-featured-image smooth-img" width="1200" height="675" fetchpriority="high">
+        </picture>
+      </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="container article-container">
+      <article class="article-body">
+        <p class="article-lead">
+          If a founder or CEO only receives October's financial statements on November 18th, those numbers are no longer a management tool—they are an autopsy report. By the time you discover that gross margin slipped by 4% or customer acquisition cost spiked in the prior month, six weeks of cash have already walked out the door.
+        </p>
+
+        <!-- Table of Contents -->
+        <nav class="article-toc" aria-label="Table of contents">
+          <div class="article-toc__title">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            <span>Contents in this Guide</span>
+          </div>
+          <ol class="article-toc__list">
+            <li><a href="#anatomy-of-a-broken-15-day-close-vs-an-automated-3-day-close" class="article-toc__link"><span class="article-toc__num">1.</span> Anatomy of a Broken 15-Day Close vs. an Automated 3-Day Close</a></li>
+            <li><a href="#3-high-impact-excel-vba-automations-that-shave-7-days-off-your-close" class="article-toc__link"><span class="article-toc__num">2.</span> 3 High-Impact Excel VBA Automations That Shave 7 Days Off Your Close</a></li>
+            <li><a href="#architecting-power-bi-for-instant-day-3-executive-reporting" class="article-toc__link"><span class="article-toc__num">3.</span> Architecting Power BI for Instant Day-3 Executive Reporting</a></li>
+            <li><a href="#the-3-day-month-end-close-checklist-downloadable-sop-structure" class="article-toc__link"><span class="article-toc__num">4.</span> The 3-Day Month-End Close Checklist (Downloadable SOP Structure)</a></li>
+            <li><a href="#faqs" class="article-toc__link"><span class="article-toc__num">5.</span> Frequently Asked Questions</a></li>
+          </ol>
+        </nav>
+
+<p>Yet across thousands of startups, e-commerce brands, and mid-market enterprises, a <strong>12-to-15 business day month-end close</strong> is accepted as normal. Every month, the finance team enters a two-week marathon of downloading trial balances from <a href="blog-quickbooks-vs-xero-vs-zoho-books-2026-comparison.html">QuickBooks Online, Xero, Zoho Books</a>, or <a href="blog-sap-erp-data-extraction-automation-finance-reporting.html">SAP/NetSuite</a>, rolling forward 25 fragile Excel tabs, fixing broken <code>#REF!</code> formulas, keying in Adjusting Journal Entries (AJEs), and manually copy-pasting charts into a board presentation.</p>
+<p>When finance leaders try to speed up the close, software vendors immediately pitch $40,000/year close-management platforms. What they won't tell you is that <strong>you already own the two most powerful close automation engines on the planet: Microsoft Excel (VBA + Power Query) and Power BI</strong>.</p>
+<p>At <a href="index.html">ShrutAura Global</a>, our Chartered Accountants and Finance Automation Engineers routinely compress 15-day manual closes into a <strong>disciplined 3-Day Close</strong>—cutting manual spreadsheet prep by up to 80%. Here is the exact technical blueprint showing how we re-engineer the month-end close.</p>
+<h2 id="anatomy-of-a-broken-15-day-close-vs-an-automated-3-day-close">Anatomy of a Broken 15-Day Close vs. an Automated 3-Day Close</h2>
+<p>Why does a traditional close drag on for three weeks? Because tasks that should be continuous or automated are batched manually at the end of the month.</p>
+<div class="article-table-wrap"><table class="article-table">
+<thead><tr>
+<th>Close Phase</th>
+<th>Traditional 15-Day Manual Close</th>
+<th>ShrutAura Automated 3-Day Close (CA Pod + VBA + Power BI)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Bank, Credit Card & Payout Reconciliations</strong></td>
+<td><strong>Days 1–5:</strong> Manually matching 30 days of transactions and chasing missing receipts.</td>
+<td><strong>Day 1 (Morning):</strong> Continuous daily feeds + <a href="blog-ecommerce-bookkeeping-shopify-amazon-stripe-reconciliation.html">automated processor clearing scripts</a> leave only final-day cutoffs to verify.</td>
+</tr>
+<tr>
+<td><strong>Accruals, Prepaids, Fixed Assets & Payroll</strong></td>
+<td><strong>Days 6–9:</strong> Rolling forward 15 Excel tabs by hand, adjusting date headers, and typing AJEs into the GL.</td>
+<td><strong>Day 1 (Afternoon):</strong> Single-click <strong>Excel VBA Macro</strong> calculates period rollforwards, validates tie-outs, and exports bulk AJE upload CSVs in 30 seconds.</td>
+</tr>
+<tr>
+<td><strong>Multi-Entity Consolidation & Eliminations</strong></td>
+<td><strong>Days 10–12:</strong> Exporting entity trial balances, mapping COA differences via <code>VLOOKUP</code>, and hunting FX variances.</td>
+<td><strong>Day 2 (Morning):</strong> Automated <strong>Power Query / VBA pipeline</strong> ingests entity TBs, applies live FX rates, and posts intercompany eliminations automatically.</td>
+</tr>
+<tr>
+<td><strong>Controller QC & Flux Variance Review</strong></td>
+<td><strong>Days 13–14:</strong> Manually scanning rows in Excel to spot accounts that moved >10% MoM.</td>
+<td><strong>Day 2 (Afternoon):</strong> Chartered Accountant reviews automated <strong>Materiality & Flux Exception Report</strong> flagging all anomalies instantly.</td>
+</tr>
+<tr>
+<td><strong>Management Pack & Board Reporting</strong></td>
+<td><strong>Day 15:</strong> Copy-pasting tables into PowerPoint/PDF and fixing rounding errors.</td>
+<td><strong>Day 3 (9:00 AM):</strong> One-click <strong>Power BI refresh</strong> publishes live interactive P&L, Balance Sheet, Cash Runway, and Department BvA dashboards.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="3-high-impact-excel-vba-automations-that-shave-7-days-off-your-close">3 High-Impact Excel VBA Automations That Shave 7 Days Off Your Close</h2>
+<p>Excel isn't slow—<strong>manual human interaction with Excel is slow</strong>. When an accountant manually inserts a new column for the current month across 12 supporting schedules, drags formulas over, and hand-keys journal entries into the accounting software, every step is a bottleneck and an error risk.</p>
+<p>Here are the three core VBA automations we deploy for our clients during onboarding:</p>
+<h3 id="automated-multi-schedule-rollforward-bulk-aje-generator">1. Automated Multi-Schedule Rollforward & Bulk AJE Generator</h3>
+<p>Instead of manually updating Prepaid Expenses, Deferred Revenue, Fixed Asset Depreciation, and Accrued Expense tabs every month, we structure workbooks around a central <code>Config_Control</code> parameters tab (where you simply enter <code>Close_Period = 2026-10-31</code>).</p>
+<p>Clicking <strong>"Generate Month-End AJEs"</strong> executes a VBA routine that:</p>
+<ol>
+<li>Loops through every schedule (Prepaids, Fixed Assets, Payroll Accrual, Deferred Rev).</li>
+</ol>
+<ol>
+<li>Extracts the exact amortization/depreciation/accrual slice for <code>2026-10-31</code>.</li>
+</ol>
+<ol>
+<li>Validates that <code>Total Debits == Total Credits</code> to the exact cent.</li>
+</ol>
+<ol>
+<li>Generates a standardized <strong>Journal Entry Import CSV</strong> formatted directly for QuickBooks Online, Xero, or NetSuite.</li>
+</ol>
+<p>#### Production VBA Code Snippet: Automated AJE Builder & Zero-Balance Gate</p>
+<pre><code class="language-vba">
+Option Explicit
+
+
+
+Sub Generate_MonthEnd_AJE_Export()
+
+    Dim wsControl As Worksheet, wsSchedule As Worksheet, wsExport As Worksheet
+
+    Dim closeDate As Date, jeRef As String
+
+    Dim lastRow As Long, i As Long, outRow As Long
+
+    Dim totalDebits As Currency, totalCredits As Currency
+
+    Dim amt As Currency
+
+    
+
+    Application.ScreenUpdating = False
+
+    Set wsControl = ThisWorkbook.Sheets("Control_Panel")
+
+    Set wsSchedule = ThisWorkbook.Sheets("Prepaid_Schedule")
+
+    Set wsExport = ThisWorkbook.Sheets("QBO_JE_Upload")
+
+    
+
+    closeDate = wsControl.Range("B2").Value   ' e.g., 2026-10-31
+
+    jeRef = "AJE-PREP-" &amp; Format(closeDate, "YYYYMM")
+
+    
+
+    ' Clear previous export buffer
+
+    wsExport.Cells.ClearContents
+
+    wsExport.Range("A1:G1").Value = Array("JournalNo", "JournalDate", "AccountName", "Debits", "Credits", "Description", "Name")
+
+    outRow = 2
+
+    totalDebits = 0: totalCredits = 0
+
+    
+
+    lastRow = wsSchedule.Cells(wsSchedule.Rows.Count, "A").End(xlUp).Row
+
+    
+
+    For i = 5 To lastRow
+
+        amt = CCur(wsSchedule.Cells(i, "K").Value) ' Current Period Amortization Column
+
+        If amt &gt; 0 Then
+
+            ' 1. Debit Expense Account
+
+            wsExport.Cells(outRow, 1).Value = jeRef
+
+            wsExport.Cells(outRow, 2).Value = Format(closeDate, "yyyy-mm-dd")
+
+            wsExport.Cells(outRow, 3).Value = wsSchedule.Cells(i, "D").Value ' Expense GL Account
+
+            wsExport.Cells(outRow, 4).Value = amt
+
+            wsExport.Cells(outRow, 5).Value = 0
+
+            wsExport.Cells(outRow, 6).Value = "Prepaid Amort: " &amp; wsSchedule.Cells(i, "B").Value
+
+            wsExport.Cells(outRow, 7).Value = wsSchedule.Cells(i, "B").Value ' Vendor Name
+
+            totalDebits = totalDebits + amt
+
+            outRow = outRow + 1
+
+            
+
+            ' 2. Credit Prepaid Asset Account
+
+            wsExport.Cells(outRow, 1).Value = jeRef
+
+            wsExport.Cells(outRow, 2).Value = Format(closeDate, "yyyy-mm-dd")
+
+            wsExport.Cells(outRow, 3).Value = wsSchedule.Cells(i, "C").Value ' Prepaid Asset GL Account
+
+            wsExport.Cells(outRow, 4).Value = 0
+
+            wsExport.Cells(outRow, 5).Value = amt
+
+            wsExport.Cells(outRow, 6).Value = "Prepaid Amort: " &amp; wsSchedule.Cells(i, "B").Value
+
+            wsExport.Cells(outRow, 7).Value = wsSchedule.Cells(i, "B").Value
+
+            totalCredits = totalCredits + amt
+
+            outRow = outRow + 1
+
+        End If
+
+    Next i
+
+    
+
+    Application.ScreenUpdating = True
+
+    
+
+    ' Chartered Accountant Control Gate: Verify Balanced Entry &amp; Schedule Tie-Out
+
+    If totalDebits &lt;&gt; totalCredits Then
+
+        MsgBox "CRITICAL ERROR: Journal Entry out of balance by " &amp; Format(totalDebits - totalCredits, "$#,##0.00"), vbCritical
+
+        Exit Sub
+
+    End If
+
+    
+
+    MsgBox "SUCCESS: Balanced AJE (" &amp; Format(totalDebits, "$#,##0.00") &amp; ") generated and ready for QBO/Xero upload!", vbInformation
+
+End Sub
+</code></pre>
+<h3 id="multi-line-description-consolidation-gl-dump-sanitizer">2. Multi-Line Description Consolidation & GL Dump Sanitizer</h3>
+<p>When exporting General Ledger detail reports from legacy ERPs or payroll systems, vendor names and memo lines are often scattered across irregular merged cells and multi-line rows. Our VBA data-cleaning scripts automatically unmerge cells, fill down parent account numbers, consolidate wrapped memo strings into a single row, and strip non-printable ASCII characters in seconds.</p>
+<h3 id="automated-balance-sheet-lead-sheet-tie-out-checker">3. Automated Balance Sheet Lead-Sheet Tie-Out Checker</h3>
+<p>A close is never complete until every Balance Sheet account on the Trial Balance matches its supporting schedule. We embed an automated <strong>Reconciliation Control Matrix</strong> tab driven by VBA that compares the live GL ending balance of every asset and liability account against the ending balance of each lead tab, highlighting any variance <code><> $0.00</code> in red and blocking final sign-off until resolved.</p>
+<div class="article-mid-cta">
+  <h3 class="article-mid-cta__title">💡 Mid-Article Callout: Want Us to Automate Your Worst Excel Close Schedule for Free?</h3>
+  <p class="article-mid-cta__desc"><strong>Hand us your most painful month-end Excel workbook or reporting bottleneck.</strong> During our <strong>Risk-Free 40-Hour Pilot</strong>, our Chartered Accountants and VBA/Power BI engineers will automate it and show you how to cut your close time down to 3 days.</p>
+  <p class="article-mid-cta__desc">👉 <strong><a href="index.html#contact">Start Your Free 40-Hour Pilot</a></strong> | <strong><a href="index.html#contact">Book a Free 15-Minute Finance Automation Audit</a></strong></p>
+  <div style="display: flex; gap: var(--space-4); margin-top: var(--space-4); flex-wrap: wrap;">
+    <a href="index.html#contact" class="btn btn--primary btn--sm btn--pill">Start Your Free 40-Hour Pilot</a>
+    <a href="index.html#contact" class="btn btn--secondary btn--sm btn--pill">Book a Free 15-Minute Audit</a>
+  </div>
+</div>
+<h2 id="architecting-power-bi-for-instant-day-3-executive-reporting">Architecting Power BI for Instant Day-3 Executive Reporting</h2>
+<p>Once your General Ledger is closed on Day 2, your team should spend <strong>zero hours</strong> building static Excel charts or formatting PDFs. By connecting your accounting software (via API, OData, or automated warehouse sync) to <strong>Microsoft Power BI</strong>, reporting becomes instantaneous.</p>
+<h3 id="the-financial-star-schema-data-model">The Financial Star-Schema Data Model</h3>
+<p>Most accountants struggle with Power BI because they try to import a flat, wide spreadsheet instead of modeling a proper <strong>Star Schema</strong>:</p>
+<ol>
+<li><strong><code>Fact_GL_Transactions</code> Table:</strong> Every posted journal line item (<code>Date</code>, <code>Account_ID</code>, <code>Department_ID</code>, <code>Entity_ID</code>, <code>Debit</code>, <code>Credit</code>, <code>Net_Amount</code>).</li>
+</ol>
+<ol>
+<li><strong><code>Fact_Budget_Forecast</code> Table:</strong> Monthly budget and rolling forecast rows at the <code>Account_ID</code> + <code>Department_ID</code> + <code>Month</code> grain.</li>
+</ol>
+<ol>
+<li><strong><code>Dim_ChartOfAccounts</code> Table:</strong> Maps every account number to its Financial Statement (<code>P&L</code> vs. <code>Balance Sheet</code>), Header Category (<code>Revenue</code>, <code>COGS</code>, <code>Sales & Marketing</code>, <code>G&A</code>), Sign Convention, and Custom Sort Order.</li>
+</ol>
+<ol>
+<li><strong><code>Dim_Calendar</code> Table:</strong> Dynamically calculates Fiscal Year, Quarter, YTD, Rolling 12 Months (LTM), and Working Days.</li>
+</ol>
+<h3 id="essential-dax-measures-for-automated-variance-analysis">Essential DAX Measures for Automated Variance Analysis</h3>
+<p>With this schema in place, dynamic DAX measures calculate your entire management pack on the fly:</p>
+<ul>
+<li><strong>Actual vs. Budget ($ and % Variance)</strong> with conditional drill-through down to the individual vendor invoice level.</li>
+</ul>
+<ul>
+<li><strong>Automated Flux Flagging:</strong> A DAX measure that automatically surfaces accounts where <code>(MoM_Change_Abs > $5,000) && (MoM_Change_Pct > 0.10)</code> so your Controller or <a href="blog-saas-financial-modeling-metrics-fractional-cfo.html">Fractional CFO</a> immediately sees what drove the month's results.</li>
+</ul>
+<ul>
+<li><strong>Multi-Currency Consolidation:</strong> Applying average monthly FX rates to P&L accounts and spot closing FX rates to Balance Sheet accounts automatically across US, UK, EU, and ANZ subsidiaries.</li>
+</ul>
+<h2 id="the-3-day-month-end-close-checklist-downloadable-sop-structure">The 3-Day Month-End Close Checklist (Downloadable SOP Structure)</h2>
+<p>To institutionalize a 3-day close in your organization, divide responsibilities strictly across <strong>Pre-Close</strong>, <strong>Day 1</strong>, <strong>Day 2</strong>, and <strong>Day 3</strong>:</p>
+<h3 id="pre-close-day-3-to-day-0">Pre-Close (Day -3 to Day 0)</h3>
+<ul class="article-checklist">
+<li>Send automated cutoff reminder to department heads for vendor bills and corporate card receipts.</li>
+</ul>
+<ul class="article-checklist">
+<li>Verify all customer invoices and recurring SaaS billing runs for the month are issued.</li>
+</ul>
+<ul class="article-checklist">
+<li>Reconcile daily bank feeds and payment processor clearing accounts up through Day -2.</li>
+</ul>
+<h3 id="day-1-cutoff-reconciliations-automated-accrual-run">Day 1: Cutoff, Reconciliations & Automated Accrual Run</h3>
+<ul class="article-checklist">
+<li>Download final month-end bank, credit card, and loan statements (or run <a href="blog-automate-pdf-bank-statements-to-quickbooks-python.html">Python PDF extraction</a>).</li>
+</ul>
+<ul class="article-checklist">
+<li>Complete final bank, <a href="blog-ecommerce-bookkeeping-shopify-amazon-stripe-reconciliation.html">Shopify/Amazon/Stripe payout</a>, and payroll register reconciliations to <code>$0.00</code> variance.</li>
+</ul>
+<ul class="article-checklist">
+<li>Execute the <strong>Excel VBA Month-End Macro</strong> to generate and upload bulk AJEs for Prepaids, Fixed Asset Depreciation, Deferred Revenue, and Wage Accruals.</li>
+</ul>
+<h3 id="day-2-multi-entity-consolidation-chartered-accountant-qc-gate">Day 2: Multi-Entity Consolidation & Chartered Accountant QC Gate</h3>
+<ul class="article-checklist">
+<li>Run automated intercompany elimination and FX translation routines.</li>
+</ul>
+<ul class="article-checklist">
+<li>Verify <code>Balance Sheet Tie-Out Matrix == $0.00</code> across all supporting schedules.</li>
+</ul>
+<ul class="article-checklist">
+<li>Chartered Accountant Pod Lead reviews the <strong>Automated Flux Analysis (>10% / >$5k)</strong> and adds executive variance commentary.</li>
+</ul>
+<ul class="article-checklist">
+<li>Lock the accounting period in QuickBooks Online / Xero / NetSuite with a closing password.</li>
+</ul>
+<h3 id="day-3-power-bi-refresh-executive-sign-off">Day 3: Power BI Refresh & Executive Sign-Off</h3>
+<ul class="article-checklist">
+<li>Trigger automated Power BI dataset refresh.</li>
+</ul>
+<ul class="article-checklist">
+<li>Distribute interactive Board & Founder Dashboard (P&L, Balance Sheet, Statement of Cash Flows, 13-Week Cash Forecast, and KPI Scorecard).</li>
+</ul>
+
+<h2 id="faqs">Frequently Asked Questions</h2>
+<div class="faq-block">
+  <div class="faq-card">
+    <h3 class="faq-card__question">1. Why does the average SMB month-end close take 12 to 15 business days?</h3>
+    <div class="faq-card__answer"><p>Most finance teams lose 70% of their close cycle to manual spreadsheet mechanics: waiting until month-end to reconcile bank and processor accounts, manually updating fragile Excel schedules for prepaids, depreciation, and deferred revenue, consolidating multi-entity trial balances via <code>VLOOKUP</code>, and manually formatting board decks.</p></div>
+  </div>
+  <div class="faq-card">
+    <h3 class="faq-card__question">2. Can we automate our month-end close with Excel VBA and Power BI instead of buying expensive close management software?</h3>
+    <div class="faq-card__answer"><p>Yes. Enterprise close tools like FloQast or BlackLine cost $25,000 to $80,000+ annually. For companies between $1M and $50M in revenue, custom Excel VBA macros combined with Power Query and a star-schema Power BI model automate 80% of recurring close schedules and reporting with zero recurring SaaS license bloat.</p></div>
+  </div>
+  <div class="faq-card">
+    <h3 class="faq-card__question">3. Which month-end accounting tasks are best suited for Excel VBA automation?</h3>
+    <div class="faq-card__answer"><p>The highest-ROI candidates for Excel VBA automation include multi-entity trial balance normalization, automated Adjusting Journal Entry (AJE) CSV generation for prepaid amortization, fixed asset depreciation, payroll accrual allocation across departments, intercompany elimination matching, and automated balance-sheet lead schedule tie-outs.</p></div>
+  </div>
+  <div class="faq-card">
+    <h3 class="faq-card__question">4. How does Power BI eliminate manual monthly management reporting?</h3>
+    <div class="faq-card__answer"><p>Once the general ledger is connected to a Power BI star-schema data model with DAX measures, finalizing the month-end close in QuickBooks, Xero, or your ERP automatically refreshes the P&L, Balance Sheet, 13-week cash flow, and budget-vs-actual variance commentary—reducing board deck preparation from 3 days to a single click.</p></div>
+  </div>
+</div>
+
+                <!-- Author Card -->
+        <div class="article-author-card">
+          <div class="article-author-card__avatar">
+            <picture>
+              <source srcset="assets/profile.webp" type="image/webp">
+              <img src="assets/profile.png" alt="CA Yash Chaplot — Chartered Accountant & Founder" class="article-author-card__avatar-img" width="80" height="80" loading="lazy">
+            </picture>
+          </div>
+          <div class="article-author-card__content">
+            <div class="article-author-card__header">
+              <div>
+                <h3 class="article-author-card__name">CA Yash Chaplot</h3>
+                <div class="article-author-card__designation">
+                  <span class="author-tag author-tag--credential">Chartered Accountant</span>
+                  <span class="author-tag author-tag--role">Founder, ShrutAura Global</span>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/company/shrutaura-global/" target="_blank" rel="noopener" class="article-author-card__link" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>Connect on LinkedIn</span>
+              </a>
+            </div>
+            <p class="article-author-card__bio">
+              Yash is a Practicing Chartered Accountant and the Founder of ShrutAura Global. As a finance technology architect, he has engineered high-throughput outsourced finance pods for mid-market SMBs, startups, and CPA firms across the US, UK, and Australia. He specializes in eliminating spreadsheet friction through Python automation, structured maker-checker controls, and executive Power BI reporting.
+            </p>
+            <div class="article-author-card__footer">
+              <div class="article-author-card__reviewer">
+                <span class="article-author-card__badge-verified">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <span>Practicing CA Sign-off:</span>
+                </span>
+                <span>ICAI Associate Member &bull; AICPA Professional Standards Compliant</span>
+              </div>
+              <div>Published: August 13, 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- In-Article CTA -->
+        <div class="article-cta" id="cta">
+          <h2 class="article-cta__title">Ready to Cut Your Month-End Close from 15 Days to 3 Days?</h2>
+          <p class="article-cta__subtitle">Stop letting manual Excel work delay your financial visibility. Let ShrutAura Global's Chartered Accountants and VBA/Power BI automation engineers re-engineer your close workflow—starting with a <strong>40-Hour Free Pilot</strong>.</p>
+          <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+            <a href="index.html#contact" class="btn btn--primary btn--lg btn--pill">Start Your Free 40-Hour Pilot</a>
+            <a href="index.html#contact" class="btn btn--secondary btn--lg btn--pill">Schedule a Free Audit</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Related Articles -->
+      <section class="related-articles">
+        <h2 class="related-articles__title">Explore More Insights & Playbooks</h2>
+        <div class="blog-grid" style="margin-top: 0;">
+          <a href="blog-sap-erp-data-extraction-automation-finance-reporting.html" class="blog-card">
+            <div class="blog-card__image-wrap">
+              <picture>
+                <source srcset="assets/blog_sap_erp.webp" type="image/webp">
+                <img src="assets/blog_sap_erp.png" alt="Towering architectural data core monolith of layered sapphire glass wafers with high-velocity laser-white and blue conduits" class="blog-card__image smooth-img" width="400" height="250" loading="lazy">
+              </picture>
+              <span class="blog-card__category">SAP & ERP Automation</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>July 23, 2026</span>
+                <span class="blog-card__meta-dot"></span>
+                <span>10 min read</span>
+              </div>
+              <h3 class="blog-card__title">SAP & ERP Data Extraction Automation: Eliminating Manual Reporting Bottlenecks for Finance Teams</h3>
+              <p class="blog-card__excerpt">Eliminate manual SAP & ERP data extraction bottlenecks using VBA SAP GUI scripting and Python automation. Cut reporting time by 80%—start your Free Pilot.</p>
+              <div class="blog-card__footer">
+                <span>Read Full Guide</span>
+                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="blog-ecommerce-bookkeeping-shopify-amazon-stripe-reconciliation.html" class="blog-card">
+            <div class="blog-card__image-wrap">
+              <picture>
+                <source srcset="assets/blog_ecommerce.webp" type="image/webp">
+                <img src="assets/blog_ecommerce.png" alt="Three fluid luminescent ribbons of emerald green, amber gold, and purple violet converging across frosted glass tiers into a crystal reservoir" class="blog-card__image smooth-img" width="400" height="250" loading="lazy">
+              </picture>
+              <span class="blog-card__category">E-Commerce Accounting</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>June 30, 2026</span>
+                <span class="blog-card__meta-dot"></span>
+                <span>10 min read</span>
+              </div>
+              <h3 class="blog-card__title">Multi-Channel E-Commerce Bookkeeping: Reconciling Shopify, Amazon, and Stripe Payouts in QBO & Xero</h3>
+              <p class="blog-card__excerpt">Master multi-channel e-commerce bookkeeping in QBO & Xero. Reconcile Shopify, Amazon FBA, and Stripe payouts to the penny. Start your Free 40-Hour Pilot.</p>
+              <div class="blog-card__footer">
+                <span>Read Full Guide</span>
+                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+    <!-- Footer -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <picture>
+            <source srcset="Logo -BG-crop.webp" type="image/webp">
+            <img src="Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="footer__logo" width="167" height="36" loading="lazy">
+          </picture>
+          <p class="footer__tagline">Simplifying Finance with Technology.</p>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/company/shrutaura-global/" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn" id="footer-linkedin">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="mailto:contact@shrutaura.com" class="footer__social-link" aria-label="Email" id="footer-email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/917733070070" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp" id="footer-whatsapp">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.503 3.936 1.386 5.613L0 24l6.563-1.329A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.614-.525-5.107-1.434l-.366-.217-3.795.769.832-3.652-.238-.377A9.719 9.719 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="footer__certifications">
+            <span class="footer__cert-title">Certified In</span>
+            <div class="footer__badges">
+              <div class="footer__badge-item" title="QuickBooks Certified ProAdvisor Advanced Online">
+                <picture>
+                  <source srcset="assets/images/qb-proadvisor.webp" type="image/webp">
+                  <img src="assets/images/qb-proadvisor.png" alt="QuickBooks Certified ProAdvisor Advanced Online"
+                    class="footer__badge-img footer__badge-img--qb" width="48" height="64" loading="lazy">
+                </picture>
+              </div>
+              <div class="footer__badge-item" title="Xero L3 Certified Specialist">
+                <picture>
+                  <source srcset="assets/images/Education_All_-_L3_certified_specialist_badge.webp" type="image/webp">
+                  <img src="assets/images/xero-certified-specialist.png" alt="Xero L3 Certified Specialist"
+                    class="footer__badge-img footer__badge-img--xero" width="48" height="48" loading="lazy">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Column -->
+        <div>
+          <h4 class="footer__column-title">Company</h4>
+          <div class="footer__links">
+            <a href="index.html#home" class="footer__link">Home</a>
+            <a href="index.html#about" class="footer__link">About</a>
+            <a href="index.html#services" class="footer__link">Services</a>
+            <a href="blog.html" class="footer__link">Blog</a>
+            <a href="index.html#faq" class="footer__link">FAQ</a>
+            <a href="index.html#contact" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <!-- Services Column -->
+        <div>
+          <h4 class="footer__column-title">Services</h4>
+          <div class="footer__links">
+            <a href="service-outsourced-accounting.html" class="footer__link">Outsourced Accounting</a>
+            <a href="service-bookkeeping.html" class="footer__link">Bookkeeping</a>
+            <a href="service-cfo-support.html" class="footer__link">CFO Support</a>
+            <a href="service-payroll.html" class="footer__link">Payroll Services</a>
+            <a href="service-automation.html" class="footer__link">Automation</a>
+            <a href="service-ai-for-finance.html" class="footer__link">AI for Finance</a>
+          </div>
+        </div>
+
+        <!-- Contact Column -->
+        <div>
+          <h4 class="footer__column-title">Get in Touch</h4>
+          <div class="footer__links">
+            <a href="https://maps.google.com/?q=Rajsamand,+Rajasthan,+India" target="_blank" rel="noopener" class="footer__link footer__link--address" title="Location: Rajsamand, Rajasthan, India">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer__link-icon" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Rajsamand, Rajasthan, India</span>
+            </a>
+            <a href="mailto:contact@shrutaura.com" class="footer__link">contact@shrutaura.com</a>
+            <a href="https://wa.me/917733070070" target="_blank" rel="noopener" class="footer__link">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/shrutaura-global/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__divider"></div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 ShrutAura Global. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="privacy-policy.html" class="footer__bottom-link">Privacy Policy</a>
+          <a href="terms-of-service.html" class="footer__bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>

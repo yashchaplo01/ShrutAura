@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QDLMZSBLF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0QDLMZSBLF');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#0B0C1A">
+
+  <!-- Primary Meta Tags -->
+  <title>SAP & ERP Data Extraction Automation for Finance Reporting | ShrutAura Global</title>
+  <meta name="title" content="SAP & ERP Data Extraction Automation for Finance Reporting | ShrutAura Global">
+  <meta name="description" content="Eliminate manual SAP & ERP data extraction bottlenecks using VBA SAP GUI scripting and Python automation. Cut reporting time by 80%—start your Free Pilot.">
+  <meta name="keywords" content="outsourced accounting, fractional CFO, accounting automation, Python accounting, QBO cleanup, CPA outsourcing, finance transformation">
+  <meta name="author" content="ShrutAura Global CA & Advisory Team">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://shrutaura.com/blog/sap-erp-data-extraction-automation-finance-reporting" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ShrutAura Global">
+  <meta property="og:url" content="https://shrutaura.com/blog/sap-erp-data-extraction-automation-finance-reporting">
+  <meta property="og:title" content="SAP & ERP Data Extraction Automation: Eliminating Manual Reporting Bottlenecks for Finance Teams">
+  <meta property="og:description" content="Why do enterprise and mid-market finance teams still spend 40% of their week manually downloading SAP T-codes into Excel? Learn how client-side SAP GUI Scripting and Python automation eliminate ERP reporting bottlenecks without waiting 6 months for IT.">
+  <meta property="og:image" content="https://shrutaura.com/assets/blog_sap_erp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="Fractured disordered glass shards passing across a cyan meridian beam and emerging as an immaculate, ordered cubic crystal matrix">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-07-23T08:00:00+00:00">
+  <meta property="article:modified_time" content="2026-07-23T08:00:00+00:00">
+  <meta property="article:author" content="ShrutAura Global CA & Advisory Team">
+  <meta property="article:section" content="SAP & ERP Automation">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SAP & ERP Data Extraction Automation: Eliminating Manual Reporting Bottlenecks for Finance Teams">
+  <meta name="twitter:description" content="Why do enterprise and mid-market finance teams still spend 40% of their week manually downloading SAP T-codes into Excel? Learn how client-side SAP GUI Scripting and Python automation eliminate ERP reporting bottlenecks without waiting 6 months for IT.">
+  <meta name="twitter:image" content="https://shrutaura.com/assets/blog_sap_erp.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../assets/Favicon.png">
+  <link rel="apple-touch-icon" href="../../assets/Favicon.png">
+
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/sections.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+
+  <link rel="preload" as="image" href="../../assets/blog_sap_erp.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="../../Logo -BG-crop.webp" type="image/webp">
+
+  <!-- Schema.org BlogPosting & FAQPage -->
+  <script type="application/ld+json">
+{
+
+  "@context": "https://schema.org",
+
+  "@graph": [
+
+    {
+
+      "@type": "Article",
+
+      "headline": "SAP & ERP Data Extraction Automation: Eliminating Manual Reporting Bottlenecks for Finance Teams",
+
+      "description": "Eliminate manual SAP & ERP data extraction bottlenecks using VBA SAP GUI scripting and Python automation. Cut reporting time by 80%—start your Free Pilot.",
+
+      "author": {
+
+        "@type": "Organization",
+
+        "name": "ShrutAura Global Private Limited",
+
+        "url": "https://shrutaura.com/"
+
+      },
+
+      "publisher": {
+
+        "@type": "Organization",
+
+        "name": "ShrutAura Global Private Limited",
+
+        "url": "https://shrutaura.com/"
+
+      },
+
+      "datePublished": "2026-07-23",
+
+      "dateModified": "2026-07-23",
+
+      "mainEntityOfPage": {
+
+        "@type": "WebPage",
+
+        "@id": "https://shrutaura.com/blog/sap-erp-data-extraction-automation-finance-reporting"
+
+      }
+
+    },
+
+    {
+
+      "@type": "FAQPage",
+
+      "mainEntity": [
+
+        {
+
+          "@type": "Question",
+
+          "name": "What is SAP GUI Scripting in finance automation?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "SAP GUI Scripting is SAP's built-in Component Object Model (COM) automation interface that allows Excel VBA or Python scripts to programmatically control the SAP GUI client—entering T-codes (such as FBL1N, FBL3N, FBL5N, SE16N), populating selection variants, handling date chunking to prevent timeouts, and exporting structured data directly into Excel or Power BI pipelines."
+
+          }
+
+        },
+
+        {
+
+          "@type": "Question",
+
+          "name": "Does SAP GUI Scripting require ABAP transport requests or changes to the SAP backend server?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "No. Client-side SAP GUI Scripting operates entirely through the user's existing authenticated SAP session and respects all existing SAP role authorizations (SU53 / PFCG). It does not require custom Z-programs, ABAP development tickets, or backend server modifications."
+
+          }
+
+        },
+
+        {
+
+          "@type": "Question",
+
+          "name": "How do you prevent SAP Foreground Timeout errors (TIME_OUT) when extracting large GL or AP/AR tables?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "Our VBA and Python automation scripts implement automated parameter chunking—splitting large extractions across company codes, fiscal periods, or document number ranges—or scheduling background jobs via SM37 and automatically downloading the completed spool files once finished."
+
+          }
+
+        },
+
+        {
+
+          "@type": "Question",
+
+          "name": "Which ERP systems can ShrutAura Global automate for financial reporting and reconciliation?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "We build custom extraction, reconciliation, and BI reporting pipelines across SAP ECC, SAP S/4HANA, Oracle NetSuite, Microsoft Dynamics 365 Business Central / Finance, Sage Intacct, and QuickBooks Enterprise."
+
+          }
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="../../index.html#home" aria-label="ShrutAura Global — Home">
+        <picture>
+          <source srcset="../../Logo -BG-crop.webp" type="image/webp">
+          <img src="../../Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="navbar__logo" width="185" height="40">
+        </picture>
+      </a>
+
+      <div class="navbar__links">
+        <a href="../../index.html#home" class="navbar__link">Home</a>
+        <a href="../../index.html#solutions" class="navbar__link">Solutions</a>
+        <a href="../../index.html#services" class="navbar__link">Services</a>
+        <a href="../../index.html#industries" class="navbar__link">Industries</a>
+        <a href="../../index.html#about" class="navbar__link">About</a>
+        <a href="../../blog.html" class="navbar__link navbar__link--active">Blog</a>
+        <a href="../../index.html#faq" class="navbar__link">FAQ</a>
+        <a href="../../index.html#contact" class="navbar__link">Contact</a>
+      </div>
+
+      <button class="navbar__toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <a href="../../index.html#home" class="mobile-menu__link">Home</a>
+    <a href="../../index.html#solutions" class="mobile-menu__link">Solutions</a>
+    <a href="../../index.html#services" class="mobile-menu__link">Services</a>
+    <a href="../../index.html#industries" class="mobile-menu__link">Industries</a>
+    <a href="../../index.html#about" class="mobile-menu__link">About</a>
+    <a href="../../blog.html" class="mobile-menu__link">Blog</a>
+    <a href="../../index.html#faq" class="mobile-menu__link">FAQ</a>
+    <a href="../../index.html#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <main>
+    <!-- Article Hero -->
+    <header class="article-hero">
+      <div class="container article-hero__inner">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../../index.html">Home</a>
+          <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+          <a href="../../blog.html">Blog</a>
+          <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+          <span class="breadcrumbs__current" aria-current="page">SAP & ERP Data Extraction Automation</span>
+        </nav>
+
+        <span class="article-badge">SAP & ERP Automation</span>
+        <h1 class="article-title">SAP & ERP Data Extraction Automation: Eliminating Manual Reporting Bottlenecks for Finance Teams</h1>
+
+        <div class="article-meta">
+                    <div class="article-author">
+            <div class="article-author__avatar">
+              <picture>
+                <source srcset="../../assets/profile.webp" type="image/webp">
+                <img src="../../assets/profile.png" alt="CA Yash Chaplot" class="article-author__avatar-img" width="44" height="44" loading="lazy">
+              </picture>
+            </div>
+            <div class="article-author__info">
+              <span class="article-author__name">CA Yash Chaplot</span>
+              <span class="article-author__badge">Chartered Accountant & Founder</span>
+            </div>
+          </div>
+          <span aria-hidden="true">&bull;</span>
+          <span class="article-meta__item">
+            <span class="article-meta__label">Published:</span>
+            <time datetime="2026-07-23">July 23, 2026</time>
+          </span>
+          <span aria-hidden="true">&bull;</span>
+          <span>10 min read</span>
+        </div>
+
+        <picture>
+          <source srcset="../../assets/blog_sap_erp.webp" type="image/webp">
+          <img src="../../assets/blog_sap_erp.png"
+            alt="High-tech enterprise finance operations center at night with floating holographic SAP ERP general ledger tables"
+            class="article-featured-image smooth-img" width="1200" height="675" fetchpriority="high">
+        </picture>
+      </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="container article-container">
+      <article class="article-body">
+        <p class="article-lead">
+          Here is the dirty secret of enterprise and mid-market corporate finance: companies spend millions of dollars implementing Tier-1 and Tier-2 ERPs like <strong>SAP ECC, SAP S/4HANA, Oracle NetSuite, and Microsoft Dynamics 365</strong>—yet their highly paid Chartered Accountants, CPAs, and financial analysts still spend <strong>15 to 25 hours every single week</strong> manually logging into ERP screens, running standard transaction codes, waiting for hourglasses to spin, exporting text files to Excel, and stitching them together with <code>VLOOKUP</code> and <code>INDEX/MATCH</code>.
+        </p>
+
+        <!-- Table of Contents -->
+        <nav class="article-toc" aria-label="Table of contents">
+          <div class="article-toc__title">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            <span>Contents in this Guide</span>
+          </div>
+          <ol class="article-toc__list">
+            <li><a href="#the-4-classic-sap-erp-bottlenecks-draining-your-finance-team" class="article-toc__link"><span class="article-toc__num">1.</span> The 4 Classic SAP & ERP Bottlenecks Draining Your Finance Team</a></li>
+            <li><a href="#how-client-side-sap-gui-scripting-excel-vba-solves-the-bottleneck-with-zero-it-ticket-delay" class="article-toc__link"><span class="article-toc__num">2.</span> How Client-Side SAP GUI Scripting + Excel VBA Solves the Bottleneck (With Zero IT Ticket Delay)</a></li>
+            <li><a href="#production-code-blueprint-automating-sap-fbl3n-gl-line-item-extraction-via-excel-vba" class="article-toc__link"><span class="article-toc__num">3.</span> Production Code Blueprint: Automating SAP `FBL3N` GL Line-Item Extraction via Excel VBA</a></li>
+            <li><a href="#comparison-manual-erp-pulls-vs-it-abap-consulting-vs-shrutaura-automation" class="article-toc__link"><span class="article-toc__num">4.</span> Comparison: Manual ERP Pulls vs. IT ABAP Consulting vs. ShrutAura Automation</a></li>
+            <li><a href="#4-high-roi-erp-finance-workflows-we-automate-every-week" class="article-toc__link"><span class="article-toc__num">5.</span> 4 High-ROI ERP Finance Workflows We Automate Every Week</a></li>
+            <li><a href="#implementation-checklist-preparing-your-erp-workflow-for-automation" class="article-toc__link"><span class="article-toc__num">6.</span> Implementation Checklist: Preparing Your ERP Workflow for Automation</a></li>
+            <li><a href="#faqs" class="article-toc__link"><span class="article-toc__num">7.</span> Frequently Asked Questions</a></li>
+          </ol>
+        </nav>
+
+<p>If you ask the internal IT department or an external ERP system integrator to automate a custom AP aging tie-out, GR/IR clearing reconciliation, or multi-company trial balance report, you get the same answer every time: <em>"Submit a change request ticket; it will take 4 months and cost $45,000 in ABAP/consultant hours."</em></p>
+<p>So the finance team gives up on IT and keeps doing it manually at 11:00 PM during <a href="../../blog-automate-month-end-close-excel-vba-power-bi.html">month-end close</a>.</p>
+<p>At <a href="../../index.html">ShrutAura Global</a>, our leadership team forged our automation methodologies inside Big-4 audit and enterprise finance environments—building production <strong>SAP GUI Scripting (<code>sapfewse.ocx</code>), Excel VBA, and Python ERP extraction tools</strong> that bypass multi-month IT queues entirely. By automating ERP data extraction directly through your existing user permissions, we eliminate up to <strong>80% of manual ERP reporting hours</strong> in days, not months.</p>
+<p>Here is the technical guide on why manual ERP extraction bottlenecks happen and how we engineer them out of existence.</p>
+<h2 id="the-4-classic-sap-erp-bottlenecks-draining-your-finance-team">The 4 Classic SAP & ERP Bottlenecks Draining Your Finance Team</h2>
+<p>Whether your team runs SAP ECC, S/4HANA, or NetSuite, manual financial data extraction breaks down in four predictable places:</p>
+<h3 id="repetitive-multi-t-code-grinding-fbl1n-fbl3n-fbl5n-mb51">1. Repetitive Multi-T-Code Grinding (<code>FBL1N</code>, <code>FBL3N</code>, <code>FBL5N</code>, <code>MB51</code>)</h3>
+<p>To build a single comprehensive working capital pack or audit binder, an analyst often has to run:</p>
+<ul>
+<li><code>FBL3N</code> / <code>FAGLL03</code> for General Ledger line items,</li>
+</ul>
+<ul>
+<li><code>FBL1N</code> for Vendor (AP) open and cleared items across 12 company codes,</li>
+</ul>
+<ul>
+<li><code>FBL5N</code> for Customer (AR) aging and disputed deductions,</li>
+</ul>
+<ul>
+<li><code>MB51</code> / <code>MC.9</code> for inventory movements and GR/IR (<code>WRX</code>) clearing analysis, and</li>
+</ul>
+<ul>
+<li><code>S_ALR_87012284</code> for statutory Financial Statement Versions.</li>
+</ul>
+<p>Running each T-code manually across 10 company codes—selecting layout variants, picking date ranges, waiting for the ALV grid to render, and clicking <code>List -> Export -> Spreadsheet</code>—easily consumes an entire workday.</p>
+<h3 id="the-dreaded-sap-foreground-time-out-dump">2. The Dreaded SAP Foreground <code>TIME_OUT</code> Dump</h3>
+<p>When querying high-volume tables in <code>SE16N</code> (such as <code>BKPF</code>, <code>BSEG</code>, or the universal journal <code>ACDOCA</code> in S/4HANA) for a full quarter or fiscal year, SAP's application server enforces a strict <code>rdisp/max_wprun_time</code> foreground limit (typically 600 seconds). At minute 9:59, the screen crashes with an ABAP <code>TIME_OUT</code> short dump, forcing the analyst to manually slice the query into 24 separate half-month pulls.</p>
+<h3 id="joining-header-line-item-tables-manually-in-excel">3. Joining Header & Line-Item Tables Manually in Excel</h3>
+<p>In SAP ECC and S/4HANA assessments, critical financial attributes are split across multiple tables:</p>
+<ul>
+<li>Document headers (<code>BKPF</code> — posting date, document type, user ID, reversal flag) vs. line items (<code>BSEG</code> / <code>ACDOCA</code> — GL account, cost center, profit center, amount).</li>
+</ul>
+<ul>
+<li>Purchase Orders (<code>EKKO</code> / <code>EKPO</code>) vs. Goods Receipts and Invoice Receipts (<code>EKBE</code>).</li>
+</ul>
+<p>Downloading 300,000 rows from two tables and running Excel <code>XLOOKUP</code> across composite keys (<code>Company Code + Document Number + Fiscal Year</code>) crashes 32-bit Excel and corrupts workbooks.</p>
+<h3 id="zero-audit-trail-on-manual-parameters">4. Zero Audit Trail on Manual Parameters</h3>
+<p>When an analyst manually types selection criteria into an ERP screen at month-end, there is no automated log proving whether they accidentally excluded a document type, missed a company code, or forgot to tick <em>"Normal Items + Noted Items + Parked Items."</em></p>
+<h2 id="how-client-side-sap-gui-scripting-excel-vba-solves-the-bottleneck-with-zero-it-ticket-delay">How Client-Side SAP GUI Scripting + Excel VBA Solves the Bottleneck (With Zero IT Ticket Delay)</h2>
+<p>The most underutilized superpower in corporate finance is <strong>SAP GUI Scripting combined with Excel VBA or Python (<code>win32com.client</code>)</strong>.</p>
+<p>Because SAP GUI exposes a native Component Object Model (COM) API on the user's workstation, an Excel macro or Python script can attach to your active, authenticated SAP session and execute 50 sequential extractions at machine speed—while enforcing 100% parameter consistency.</p>
+<h3 id="why-finance-leaders-auditors-love-this-approach">Why Finance Leaders & Auditors Love This Approach:</h3>
+<ol>
+<li><strong>No Backend ABAP Changes Required:</strong> You do not need to deploy custom <code>Z_PROGRAMS</code> or modify SAP production servers.</li>
+</ol>
+<ol>
+<li><strong>Inherits 100% of Existing SAP Security Roles:</strong> The script can only access the exact T-codes and company codes the logged-in finance user is already authorized to view under SOX/internal controls.</li>
+</ol>
+<ol>
+<li><strong>Automated Date & Company Code Chunking:</strong> Instead of crashing with a <code>TIME_OUT</code> error on a 12-month pull, the VBA loop automatically queries 15-day slices sequentially, exports each slice to a local staging folder, and merges them via Power Query/Python in the background.</li>
+</ol>
+<h2 id="production-code-blueprint-automating-sap-fbl3n-gl-line-item-extraction-via-excel-vba">Production Code Blueprint: Automating SAP <code>FBL3N</code> GL Line-Item Extraction via Excel VBA</h2>
+<p>Below is a clean, practitioner-level VBA architecture showing how we connect Excel directly to an active SAP GUI session, populate <code>FBL3N</code> dynamic parameters from an Excel control sheet, and export the resulting ALV grid automatically:</p>
+<pre><code class="language-vba">
+Option Explicit
+
+
+
+Public Sub Automate_SAP_FBL3N_Extraction()
+
+    Dim SapGuiAuto As Object
+
+    Dim SAPApp As Object
+
+    Dim SAPCon As Object
+
+    Dim session As Object
+
+    Dim wsConfig As Worksheet
+
+    Dim companyCode As String, glAccountLow As String, glAccountHigh As String
+
+    Dim dateFrom As String, dateTo As String, exportPath As String, exportFile As String
+
+    
+
+    On Error GoTo ErrorHandler
+
+    Set wsConfig = ThisWorkbook.Sheets("SAP_Control")
+
+    
+
+    ' Read extraction parameters from Excel Control Sheet (Ensuring 100% Audit Trail)
+
+    companyCode = wsConfig.Range("B2").Value     ' e.g., "1000"
+
+    glAccountLow = wsConfig.Range("B3").Value    ' e.g., "100000"
+
+    glAccountHigh = wsConfig.Range("B4").Value   ' e.g., "299999"
+
+    dateFrom = wsConfig.Range("B5").Value        ' e.g., "01.10.2026"
+
+    dateTo = wsConfig.Range("B6").Value          ' e.g., "31.10.2026"
+
+    exportPath = wsConfig.Range("B7").Value      ' e.g., "C:\Finance_Automation\Staging\"
+
+    exportFile = "FBL3N_" &amp; companyCode &amp; "_" &amp; Format(Now, "yyyymmdd_hhnnss") &amp; ".xlsx"
+
+    
+
+    ' Attach to active authenticated SAP GUI Session
+
+    Set SapGuiAuto = GetObject("SAPGUI")
+
+    Set SAPApp = SapGuiAuto.GetScriptingEngine
+
+    Set SAPCon = SAPApp.Children(0)
+
+    Set session = SAPCon.Children(0)
+
+    
+
+    ' 1. Launch Transaction FBL3N in clean state
+
+    session.findById("wnd[0]/tbar[0]/okcd").Text = "/nFBL3N"
+
+    session.findById("wnd[0]").sendVKey 0
+
+    
+
+    ' 2. Populate GL Account Range &amp; Company Code
+
+    session.findById("wnd[0]/usr/ctxtSD_SAKNR-LOW").Text = glAccountLow
+
+    session.findById("wnd[0]/usr/ctxtSD_SAKNR-HIGH").Text = glAccountHigh
+
+    session.findById("wnd[0]/usr/ctxtSD_BUKRS-LOW").Text = companyCode
+
+    
+
+    ' 3. Select "All Items" radio button and Posting Date range
+
+    session.findById("wnd[0]/usr/radX_AISEL").Select
+
+    session.findById("wnd[0]/usr/ctxtSO_BUDAT-LOW").Text = dateFrom
+
+    session.findById("wnd[0]/usr/ctxtSO_BUDAT-HIGH").Text = dateTo
+
+    
+
+    ' 4. Apply standardized ALV Layout Variant so columns never shift
+
+    session.findById("wnd[0]/usr/ctxtPA_VARI").Text = "/FIN_AUDIT"
+
+    
+
+    ' 5. Execute Query (F8)
+
+    session.findById("wnd[0]/tbar[1]/btn[8]").press
+
+    
+
+    ' 6. Trigger Native Spreadsheet Export from ALV Grid
+
+    session.findById("wnd[0]/mbar/menu[0]/menu[3]/menu[1]").Select
+
+    session.findById("wnd[1]/tbar[0]/btn[0]").press
+
+    session.findById("wnd[1]/usr/ctxtDY_PATH").Text = exportPath
+
+    session.findById("wnd[1]/usr/ctxtDY_FILENAME").Text = exportFile
+
+    session.findById("wnd[1]/tbar[0]/btn[11]").press ' Replace/Save
+
+    
+
+    ' Log execution timestamp &amp; row confirmation for Chartered Accountant QC
+
+    wsConfig.Range("B10").Value = "SUCCESS: Extracted to " &amp; exportPath &amp; exportFile
+
+    wsConfig.Range("B11").Value = Now
+
+    Exit Sub
+
+
+
+ErrorHandler:
+
+    MsgBox "SAP Automation Exception: " &amp; Err.Description &amp; " (Verify SAP session is logged in)", vbExclamation
+
+End Sub
+</code></pre>
+<h2 id="comparison-manual-erp-pulls-vs-it-abap-consulting-vs-shrutaura-automation">Comparison: Manual ERP Pulls vs. IT ABAP Consulting vs. ShrutAura Automation</h2>
+<div class="article-table-wrap"><table class="article-table">
+<thead><tr>
+<th>Evaluation Criteria</th>
+<th>Manual Analyst ERP Downloads</th>
+<th>Custom IT / ABAP / ERP Consultant Build</th>
+<th>ShrutAura VBA + Python ERP Automation</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Deployment Timeline</strong></td>
+<td>Ongoing weekly pain forever</td>
+<td>3 to 6 Months (IT backlog + UAT)</td>
+<td><strong>5 to 10 Business Days</strong></td>
+</tr>
+<tr>
+<td><strong>Upfront Implementation Cost</strong></td>
+<td>$35,000+ / yr in wasted analyst hours</td>
+<td>$25,000 – $80,000+ per project</td>
+<td><strong>Included in Pod or Fixed-Fee Sprint (Start with Free 40-Hr Pilot)</strong></td>
+</tr>
+<tr>
+<td><strong>Requires Backend ERP Server Changes?</strong></td>
+<td>No</td>
+<td>Yes (Transport requests, security review)</td>
+<td><strong>No (Runs via existing user permissions)</strong></td>
+</tr>
+<tr>
+<td><strong>Data Merging (<code>BKPF</code> + <code>BSEG</code> / Multi-Entity)</strong></td>
+<td>Fragile Excel <code>VLOOKUP</code> (crashes on >100k rows)</td>
+<td>Rigid static report</td>
+<td><strong>Python <code>pandas</code> / Power Query handles millions of rows in seconds</strong></td>
+</tr>
+<tr>
+<td><strong>Downstream Output</strong></td>
+<td>Static manually formatted spreadsheet</td>
+<td>Raw table dump</td>
+<td><strong>Reconciled Excel Lead Sheets + Live Power BI Dashboard</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="article-mid-cta">
+  <h3 class="article-mid-cta__title">💡 Mid-Article Callout: Tired of Spending Days Downloading SAP or NetSuite Reports?</h3>
+  <p class="article-mid-cta__desc"><strong>Let our finance automation engineers automate your toughest ERP extraction or reconciliation workflow for free.</strong> During our <strong>40-Hour Risk-Free Pilot</strong>, we will build a working VBA/Python automation prototype on your real reporting process.</p>
+  <p class="article-mid-cta__desc">👉 <strong><a href="../../index.html#contact">Start Your Free 40-Hour Pilot</a></strong> | <strong><a href="../../index.html#contact">Book a Free 15-Minute Finance Automation Audit</a></strong></p>
+  <div style="display: flex; gap: var(--space-4); margin-top: var(--space-4); flex-wrap: wrap;">
+    <a href="../../index.html#contact" class="btn btn--primary btn--sm btn--pill">Start Your Free 40-Hour Pilot</a>
+    <a href="../../index.html#contact" class="btn btn--secondary btn--sm btn--pill">Book a Free 15-Minute Audit</a>
+  </div>
+</div>
+<h2 id="4-high-roi-erp-finance-workflows-we-automate-every-week">4 High-ROI ERP Finance Workflows We Automate Every Week</h2>
+<p>When ShrutAura Global partners with mid-market CFOs, Controllers, and internal audit teams, we target the four processes that consume the most manual hours:</p>
+<ol>
+<li><strong>Automated Three-Way Match & GR/IR (<code>WRX</code>) Clearing Reconciliation:</strong></li>
+</ol>
+<p>Automatically extracting <code>MB51</code> (Goods Receipts), <code>MIR5</code> (Invoice Receipts), and <code>FBL3N</code> (GR/IR Clearing GL lines), matching them by Purchase Order + Line Item (<code>EBELN</code> + <code>EBELP</code>) in Python, and aging unmatched receipts so procurement and AP can clear aged accruals before audit cutoffs.</p>
+<ol>
+<li><strong>Multi-Company Trial Balance Consolidation & Intercompany Matching:</strong></li>
+</ol>
+<p>Looping across 5 to 50 company codes overnight, extracting trial balances (<code>S_ALR_87012277</code>), translating local currencies into USD/GBP/EUR/AUD, and flagging intercompany receivable/payable out-of-balance pairs prior to <a href="../../blog-automate-month-end-close-excel-vba-power-bi.html">Day 2 of the month-end close</a>.</p>
+<ol>
+<li><strong>Automated AP Vendor Statement Reconciliation:</strong></li>
+</ol>
+<p>Combining <a href="../../blog-automate-pdf-bank-statements-to-quickbooks-python.html">Python PDF extraction</a> (for vendor statements received via email) with automated <code>FBL1N</code> vendor ledger pulls to instantly highlight missing invoices, duplicate payments, or unapplied debit memos.</p>
+<ol>
+<li><strong>Automated Audit Sampling & Journal Entry Testing (JET):</strong></li>
+</ol>
+<p>For internal audit teams and <a href="../../blog-offshore-accounting-pods-for-us-cpa-firms.html">partner CPA firms</a>, extracting full-population general ledger dumps (<code>BKPF</code>/<code>BSEG</code>/<code>ACDOCA</code>) and running Python scripts that test 100% of entries for weekend postings, round-dollar anomalies, unauthorized user IDs, and unbalanced manual adjustments.</p>
+<h2 id="implementation-checklist-preparing-your-erp-workflow-for-automation">Implementation Checklist: Preparing Your ERP Workflow for Automation</h2>
+<p>Want to know if your current SAP, NetSuite, or Dynamics workflow can be automated this week? Check these five criteria:</p>
+<ul class="article-checklist">
+<li><strong>1. Rule-Based Selection Inputs:</strong> Can the dates, company codes, GL account ranges, or cost centers be defined logically in an Excel parameter table?</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>2. Standardized Layout Variants:</strong> Do you have (or can we save) a locked layout variant (e.g., <code>/FIN_AUTO</code>) so exported column headers remain deterministic?</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>3. Read-Only Extraction Focus:</strong> Are you extracting, reconciling, and transforming ERP data for reporting/analytics, or uploading validated standard journal templates (<code>FB50</code> / <code>FV50</code> / BAPI templates)?</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>4. Repetitive Frequency:</strong> Does your team run this extraction daily, weekly, or every month-end close across multiple entities?</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>5. Clear Control Tie-Out:</strong> Can the extracted line-item total be automatically cross-checked against a summary trial balance report (<code>F.08</code> / <code>S_ALR_87012277</code>) to guarantee completeness?</li>
+</ul>
+
+<h2 id="faqs">Frequently Asked Questions</h2>
+<div class="faq-block">
+  <div class="faq-card">
+    <h3 class="faq-card__question">1. What is SAP GUI Scripting in finance automation?</h3>
+    <div class="faq-card__answer"><p>SAP GUI Scripting is SAP's built-in Component Object Model (COM) automation interface that allows Excel VBA or Python scripts to programmatically control the SAP GUI client—entering T-codes (such as <code>FBL1N</code>, <code>FBL3N</code>, <code>FBL5N</code>, <code>SE16N</code>), populating selection variants, handling date chunking to prevent timeouts, and exporting structured data directly into Excel or Power BI pipelines.</p></div>
+  </div>
+  <div class="faq-card">
+    <h3 class="faq-card__question">2. Does SAP GUI Scripting require ABAP transport requests or changes to the SAP backend server?</h3>
+    <div class="faq-card__answer"><p>No. Client-side SAP GUI Scripting operates entirely through the user's existing authenticated SAP session and respects all existing SAP role authorizations (<code>SU53</code> / <code>PFCG</code>). It does not require custom Z-programs, ABAP development tickets, or backend server modifications.</p></div>
+  </div>
+  <div class="faq-card">
+    <h3 class="faq-card__question">3. How do you prevent SAP Foreground Timeout errors (<code>TIME_OUT</code>) when extracting large GL or AP/AR tables?</h3>
+    <div class="faq-card__answer"><p>Our VBA and Python automation scripts implement automated parameter chunking—splitting large extractions across company codes, fiscal periods, or document number ranges—or scheduling background jobs via <code>SM37</code> and automatically downloading the completed spool files once finished.</p></div>
+  </div>
+  <div class="faq-card">
+    <h3 class="faq-card__question">4. Which ERP systems can ShrutAura Global automate for financial reporting and reconciliation?</h3>
+    <div class="faq-card__answer"><p>We build custom extraction, reconciliation, and BI reporting pipelines across SAP ECC, SAP S/4HANA, Oracle NetSuite, Microsoft Dynamics 365 Business Central / Finance, Sage Intacct, and QuickBooks Enterprise.</p></div>
+  </div>
+</div>
+
+                <!-- Author Card -->
+        <div class="article-author-card">
+          <div class="article-author-card__avatar">
+            <picture>
+              <source srcset="../../assets/profile.webp" type="image/webp">
+              <img src="../../assets/profile.png" alt="CA Yash Chaplot — Chartered Accountant & Founder" class="article-author-card__avatar-img" width="80" height="80" loading="lazy">
+            </picture>
+          </div>
+          <div class="article-author-card__content">
+            <div class="article-author-card__header">
+              <div>
+                <h3 class="article-author-card__name">CA Yash Chaplot</h3>
+                <div class="article-author-card__designation">
+                  <span class="author-tag author-tag--credential">Chartered Accountant</span>
+                  <span class="author-tag author-tag--role">Founder, ShrutAura Global</span>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/company/shrutaura-global/" target="_blank" rel="noopener" class="article-author-card__link" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>Connect on LinkedIn</span>
+              </a>
+            </div>
+            <p class="article-author-card__bio">
+              Yash is a Practicing Chartered Accountant and the Founder of ShrutAura Global. As a finance technology architect, he has engineered high-throughput outsourced finance pods for mid-market SMBs, startups, and CPA firms across the US, UK, and Australia. He specializes in eliminating spreadsheet friction through Python automation, structured maker-checker controls, and executive Power BI reporting.
+            </p>
+            <div class="article-author-card__footer">
+              <div class="article-author-card__reviewer">
+                <span class="article-author-card__badge-verified">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <span>Practicing CA Sign-off:</span>
+                </span>
+                <span>ICAI Associate Member &bull; AICPA Professional Standards Compliant</span>
+              </div>
+              <div>Published: July 23, 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- In-Article CTA -->
+        <div class="article-cta" id="cta">
+          <h2 class="article-cta__title">Stop Using Highly Paid Accountants as Human Copy-Paste Machines</h2>
+          <p class="article-cta__subtitle">Unlock the data trapped inside your SAP, NetSuite, or Dynamics ERP without waiting six months for IT. Test our Chartered Accountant + ERP Automation Pod on your most frustrating reporting bottleneck—completely free for 40 hours.</p>
+          <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+            <a href="../../index.html#contact" class="btn btn--primary btn--lg btn--pill">Start Your Free 40-Hour Pilot</a>
+            <a href="../../index.html#contact" class="btn btn--secondary btn--lg btn--pill">Schedule a Free Audit</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Related Articles -->
+      <section class="related-articles">
+        <h2 class="related-articles__title">Explore More Insights & Playbooks</h2>
+        <div class="blog-grid" style="margin-top: 0;">
+          <a href="../../blog-ecommerce-bookkeeping-shopify-amazon-stripe-reconciliation.html" class="blog-card">
+            <div class="blog-card__image-wrap">
+              <picture>
+                <source srcset="../../assets/blog_ecommerce.webp" type="image/webp">
+                <img src="../../assets/blog_ecommerce.png" alt="High-end multi-channel e-commerce financial operations studio reconciling Shopify, Amazon, and Stripe payment gateways" class="blog-card__image smooth-img" width="400" height="250" loading="lazy">
+              </picture>
+              <span class="blog-card__category">E-Commerce Accounting</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>June 30, 2026</span>
+                <span class="blog-card__meta-dot"></span>
+                <span>10 min read</span>
+              </div>
+              <h3 class="blog-card__title">Multi-Channel E-Commerce Bookkeeping: Reconciling Shopify, Amazon, and Stripe Payouts in QBO & Xero</h3>
+              <p class="blog-card__excerpt">Master multi-channel e-commerce bookkeeping in QBO & Xero. Reconcile Shopify, Amazon FBA, and Stripe payouts to the penny. Start your Free 40-Hour Pilot.</p>
+              <div class="blog-card__footer">
+                <span>Read Full Guide</span>
+                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="../../blog-quickbooks-online-cleanup-checklist-audit-ready.html" class="blog-card">
+            <div class="blog-card__image-wrap">
+              <picture>
+                <source srcset="../../assets/blog_qbo_cleanup.webp" type="image/webp">
+                <img src="../../assets/blog_qbo_cleanup.png" alt="Senior forensic chartered accountant reviewing messy corporate accounts with floating holographic 7-step audit checklist" class="blog-card__image smooth-img" width="400" height="250" loading="lazy">
+              </picture>
+              <span class="blog-card__category">Catch-Up & Cleanup Accounting</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>June 11, 2026</span>
+                <span class="blog-card__meta-dot"></span>
+                <span>10 min read</span>
+              </div>
+              <h3 class="blog-card__title">QuickBooks Online Messy Books Cleanup: A 7-Step Checklist to Get Audit- and Investor-Ready</h3>
+              <p class="blog-card__excerpt">Fix messy QuickBooks Online books fast with our Chartered Accountant 7-step QBO cleanup checklist. Get audit & investor-ready—start your Free 40-Hour Pilot.</p>
+              <div class="blog-card__footer">
+                <span>Read Full Guide</span>
+                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+    <!-- Footer -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <picture>
+            <source srcset="../../Logo -BG-crop.webp" type="image/webp">
+            <img src="../../Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="footer__logo" width="167" height="36" loading="lazy">
+          </picture>
+          <p class="footer__tagline">Simplifying Finance with Technology.</p>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/company/shrutaura-global/" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn" id="footer-linkedin">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="mailto:contact@shrutaura.com" class="footer__social-link" aria-label="Email" id="footer-email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/917733070070" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp" id="footer-whatsapp">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.503 3.936 1.386 5.613L0 24l6.563-1.329A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.614-.525-5.107-1.434l-.366-.217-3.795.769.832-3.652-.238-.377A9.719 9.719 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="footer__certifications">
+            <span class="footer__cert-title">Certified In</span>
+            <div class="footer__badges">
+              <div class="footer__badge-item" title="QuickBooks Certified ProAdvisor Advanced Online">
+                <picture>
+                  <source srcset="../../assets/images/qb-proadvisor.webp" type="image/webp">
+                  <img src="../../assets/images/qb-proadvisor.png" alt="QuickBooks Certified ProAdvisor Advanced Online"
+                    class="footer__badge-img footer__badge-img--qb" width="48" height="64" loading="lazy">
+                </picture>
+              </div>
+              <div class="footer__badge-item" title="Xero L3 Certified Specialist">
+                <picture>
+                  <source srcset="../../assets/images/Education_All_-_L3_certified_specialist_badge.webp" type="image/webp">
+                  <img src="../../assets/images/xero-certified-specialist.png" alt="Xero L3 Certified Specialist"
+                    class="footer__badge-img footer__badge-img--xero" width="48" height="48" loading="lazy">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Column -->
+        <div>
+          <h4 class="footer__column-title">Company</h4>
+          <div class="footer__links">
+            <a href="../../index.html#home" class="footer__link">Home</a>
+            <a href="../../index.html#about" class="footer__link">About</a>
+            <a href="../../index.html#services" class="footer__link">Services</a>
+            <a href="../../blog.html" class="footer__link">Blog</a>
+            <a href="../../index.html#faq" class="footer__link">FAQ</a>
+            <a href="../../index.html#contact" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <!-- Services Column -->
+        <div>
+          <h4 class="footer__column-title">Services</h4>
+          <div class="footer__links">
+            <a href="../../service-outsourced-accounting.html" class="footer__link">Outsourced Accounting</a>
+            <a href="../../service-bookkeeping.html" class="footer__link">Bookkeeping</a>
+            <a href="../../service-cfo-support.html" class="footer__link">CFO Support</a>
+            <a href="../../service-payroll.html" class="footer__link">Payroll Services</a>
+            <a href="../../service-automation.html" class="footer__link">Automation</a>
+            <a href="../../service-ai-for-finance.html" class="footer__link">AI for Finance</a>
+          </div>
+        </div>
+
+        <!-- Contact Column -->
+        <div>
+          <h4 class="footer__column-title">Get in Touch</h4>
+          <div class="footer__links">
+            <a href="https://maps.google.com/?q=Rajsamand,+Rajasthan,+India" target="_blank" rel="noopener" class="footer__link footer__link--address" title="Location: Rajsamand, Rajasthan, India">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer__link-icon" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Rajsamand, Rajasthan, India</span>
+            </a>
+            <a href="mailto:contact@shrutaura.com" class="footer__link">contact@shrutaura.com</a>
+            <a href="https://wa.me/917733070070" target="_blank" rel="noopener" class="footer__link">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/shrutaura-global/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__divider"></div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 ShrutAura Global. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="../../privacy-policy.html" class="footer__bottom-link">Privacy Policy</a>
+          <a href="../../terms-of-service.html" class="footer__bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/analytics.js"></script>
+</body>
+</html>

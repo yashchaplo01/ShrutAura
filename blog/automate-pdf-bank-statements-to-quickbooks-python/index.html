@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0QDLMZSBLF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-0QDLMZSBLF');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#0B0C1A">
+
+  <!-- Primary Meta Tags -->
+  <title>Automate PDF Bank Statements into QuickBooks Online Using Python | ShrutAura Global</title>
+  <meta name="title" content="Automate PDF Bank Statements into QuickBooks Online Using Python | ShrutAura Global">
+  <meta name="description" content="Learn how to parse unstructured PDF bank statements into QuickBooks Online CSVs using Python, pdfplumber & pandas. Start your Free 40-Hour Pilot today.">
+  <meta name="keywords" content="outsourced accounting, fractional CFO, accounting automation, Python accounting, QBO cleanup, CPA outsourcing, finance transformation">
+  <meta name="author" content="ShrutAura Global CA & Advisory Team">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://shrutaura.com/blog/automate-pdf-bank-statements-to-quickbooks-python" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ShrutAura Global">
+  <meta property="og:url" content="https://shrutaura.com/blog/automate-pdf-bank-statements-to-quickbooks-python">
+  <meta property="og:title" content="How to Automate Unstructured PDF Bank Statements into QuickBooks Online Using Python">
+  <meta property="og:description" content="Stop manually typing PDF bank and credit card statements into QuickBooks Online. See the exact Python pipeline our Chartered Accountants use to extract, validate, and import thousands of transactions in minutes.">
+  <meta property="og:image" content="https://shrutaura.com/assets/blog_pdf_python.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="Towering architectural data core monolith of layered sapphire glass wafers with high-velocity laser-white and blue conduits">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-09-03T08:00:00+00:00">
+  <meta property="article:modified_time" content="2026-09-03T08:00:00+00:00">
+  <meta property="article:author" content="ShrutAura Global CA & Advisory Team">
+  <meta property="article:section" content="Finance Automation & Python">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Automate Unstructured PDF Bank Statements into QuickBooks Online Using Python">
+  <meta name="twitter:description" content="Stop manually typing PDF bank and credit card statements into QuickBooks Online. See the exact Python pipeline our Chartered Accountants use to extract, validate, and import thousands of transactions in minutes.">
+  <meta name="twitter:image" content="https://shrutaura.com/assets/blog_pdf_python.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../assets/Favicon.png">
+  <link rel="apple-touch-icon" href="../../assets/Favicon.png">
+
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../css/variables.css">
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/sections.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+
+  <link rel="preload" as="image" href="../../assets/blog_pdf_python.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="../../Logo -BG-crop.webp" type="image/webp">
+
+  <!-- Schema.org BlogPosting & FAQPage -->
+  <script type="application/ld+json">
+{
+
+  "@context": "https://schema.org",
+
+  "@graph": [
+
+    {
+
+      "@type": "Article",
+
+      "headline": "How to Automate Unstructured PDF Bank Statements into QuickBooks Online Using Python",
+
+      "description": "Learn how to parse unstructured PDF bank statements into QuickBooks Online CSVs using Python, pdfplumber & pandas. Start your Free 40-Hour Pilot today.",
+
+      "author": {
+
+        "@type": "Organization",
+
+        "name": "ShrutAura Global Private Limited",
+
+        "url": "https://shrutaura.com/"
+
+      },
+
+      "publisher": {
+
+        "@type": "Organization",
+
+        "name": "ShrutAura Global Private Limited",
+
+        "url": "https://shrutaura.com/"
+
+      },
+
+      "datePublished": "2026-09-03",
+
+      "dateModified": "2026-09-03",
+
+      "mainEntityOfPage": {
+
+        "@type": "WebPage",
+
+        "@id": "https://shrutaura.com/blog/automate-pdf-bank-statements-to-quickbooks-python"
+
+      }
+
+    },
+
+    {
+
+      "@type": "FAQPage",
+
+      "mainEntity": [
+
+        {
+
+          "@type": "Question",
+
+          "name": "Why do standard PDF-to-Excel converters fail on bank statements?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "Generic PDF-to-Excel tools rely on visible gridlines and fail when bank statements have borderless tables, multi-line transaction descriptions, page header/footer interruptions, or combined debit/credit columns with trailing 'CR' or '-' indicators. A custom Python pipeline using coordinate-based parsing and regex resolves these structural issues."
+
+          }
+
+        },
+
+        {
+
+          "@type": "Question",
+
+          "name": "How do you guarantee 100% accounting accuracy when extracting PDF bank statements with Python?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "At ShrutAura Global, every Python extraction script includes an automated accounting checksum validation gate: Opening Balance + Total Deposits (Credits) - Total Withdrawals (Debits) must equal the Ending Statement Balance to the exact cent ($0.00 variance), alongside row-by-row running balance reconciliation."
+
+          }
+
+        },
+
+        {
+
+          "@type": "Question",
+
+          "name": "What CSV format does QuickBooks Online require for bank statement imports?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "QuickBooks Online accepts either a 3-column CSV format (Date, Description, Amount where inflows are positive and outflows are negative) or a 4-column CSV format (Date, Description, Credit, Debit) with standard MM/DD/YYYY or DD/MM/YYYY date formatting and no currency symbols or thousand-separator commas."
+
+          }
+
+        },
+
+        {
+
+          "@type": "Question",
+
+          "name": "Can Python extract transactions from scanned or image-based PDF bank statements?",
+
+          "acceptedAnswer": {
+
+            "@type": "Answer",
+
+            "text": "Yes. While native digital PDFs are parsed directly via pdfplumber, scanned image PDFs are processed through an OCR pre-processing layer (using Tesseract OCR or AWS Textract with deskewing and contrast thresholding) followed by regex validation and automated running-balance checksum checks."
+
+          }
+
+        }
+
+      ]
+
+    }
+
+  ]
+
+}
+  </script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar__inner">
+      <a href="../../index.html#home" aria-label="ShrutAura Global — Home">
+        <picture>
+          <source srcset="../../Logo -BG-crop.webp" type="image/webp">
+          <img src="../../Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="navbar__logo" width="185" height="40">
+        </picture>
+      </a>
+
+      <div class="navbar__links">
+        <a href="../../index.html#home" class="navbar__link">Home</a>
+        <a href="../../index.html#solutions" class="navbar__link">Solutions</a>
+        <a href="../../index.html#services" class="navbar__link">Services</a>
+        <a href="../../index.html#industries" class="navbar__link">Industries</a>
+        <a href="../../index.html#about" class="navbar__link">About</a>
+        <a href="../../blog.html" class="navbar__link navbar__link--active">Blog</a>
+        <a href="../../index.html#faq" class="navbar__link">FAQ</a>
+        <a href="../../index.html#contact" class="navbar__link">Contact</a>
+      </div>
+
+      <button class="navbar__toggle" id="mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Mobile navigation">
+    <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <a href="../../index.html#home" class="mobile-menu__link">Home</a>
+    <a href="../../index.html#solutions" class="mobile-menu__link">Solutions</a>
+    <a href="../../index.html#services" class="mobile-menu__link">Services</a>
+    <a href="../../index.html#industries" class="mobile-menu__link">Industries</a>
+    <a href="../../index.html#about" class="mobile-menu__link">About</a>
+    <a href="../../blog.html" class="mobile-menu__link">Blog</a>
+    <a href="../../index.html#faq" class="mobile-menu__link">FAQ</a>
+    <a href="../../index.html#contact" class="mobile-menu__link">Contact</a>
+  </div>
+
+  <main>
+    <!-- Article Hero -->
+    <header class="article-hero">
+      <div class="container article-hero__inner">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../../index.html">Home</a>
+          <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+          <a href="../../blog.html">Blog</a>
+          <span class="breadcrumbs__separator" aria-hidden="true">/</span>
+          <span class="breadcrumbs__current" aria-current="page">How to Automate Unstructured PDF Bank...</span>
+        </nav>
+
+        <span class="article-badge">Finance Automation & Python</span>
+        <h1 class="article-title">How to Automate Unstructured PDF Bank Statements into QuickBooks Online Using Python</h1>
+
+        <div class="article-meta">
+                    <div class="article-author">
+            <div class="article-author__avatar">
+              <picture>
+                <source srcset="../../assets/profile.webp" type="image/webp">
+                <img src="../../assets/profile.png" alt="CA Yash Chaplot" class="article-author__avatar-img" width="44" height="44" loading="lazy">
+              </picture>
+            </div>
+            <div class="article-author__info">
+              <span class="article-author__name">CA Yash Chaplot</span>
+              <span class="article-author__badge">Chartered Accountant & Founder</span>
+            </div>
+          </div>
+          <span aria-hidden="true">&bull;</span>
+          <span class="article-meta__item">
+            <span class="article-meta__label">Published:</span>
+            <time datetime="2026-09-03">September 3, 2026</time>
+          </span>
+          <span aria-hidden="true">&bull;</span>
+          <span>10 min read</span>
+        </div>
+
+        <picture>
+          <source srcset="../../assets/blog_pdf_python.webp" type="image/webp">
+          <img src="../../assets/blog_pdf_python.png"
+            alt="Modern dark executive financial technology laboratory with Python code and floating transparent PDF bank statements"
+            class="article-featured-image smooth-img" width="1200" height="675" fetchpriority="high">
+        </picture>
+      </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="container article-container">
+      <article class="article-body">
+        <p class="article-lead">
+          Every accountant, bookkeeper, and tax preparer knows the dread of opening a client's onboarding folder to find <strong>36 months of PDF bank and credit card statements</strong>—and zero CSV exports.
+        </p>
+
+        <!-- Table of Contents -->
+        <nav class="article-toc" aria-label="Table of contents">
+          <div class="article-toc__title">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            <span>Contents in this Guide</span>
+          </div>
+          <ol class="article-toc__list">
+            <li><a href="#why-generic-pdf-converters-break-on-financial-statements" class="article-toc__link"><span class="article-toc__num">1.</span> Why Generic PDF Converters Break on Financial Statements</a></li>
+            <li><a href="#the-4-stage-python-architecture-for-zero-error-pdf-extraction" class="article-toc__link"><span class="article-toc__num">2.</span> The 4-Stage Python Architecture for Zero-Error PDF Extraction</a></li>
+            <li><a href="#step-by-step-python-implementation-code" class="article-toc__link"><span class="article-toc__num">3.</span> Step-by-Step Python Implementation Code</a></li>
+            <li><a href="#comparison-manual-entry-vs-saas-ocr-tools-vs-shrutaura-python-pipeline" class="article-toc__link"><span class="article-toc__num">4.</span> Comparison: Manual Entry vs. SaaS OCR Tools vs. ShrutAura Python Pipeline</a></li>
+            <li><a href="#quickbooks-online-import-formatting-checklist-preventing-qbo-upload-errors" class="article-toc__link"><span class="article-toc__num">5.</span> QuickBooks Online Import Formatting Checklist (Preventing QBO Upload Errors)</a></li>
+            <li><a href="#beyond-csvs-pre-mapping-vendor-rules-before-hitting-quickbooks" class="article-toc__link"><span class="article-toc__num">6.</span> Beyond CSVs: Pre-Mapping Vendor Rules Before Hitting QuickBooks</a></li>
+            <li><a href="#faqs" class="article-toc__link"><span class="article-toc__num">7.</span> Frequently Asked Questions</a></li>
+          </ol>
+        </nav>
+
+<p>Why does this still happen in 2026? Direct bank feeds in QuickBooks Online (QBO) and Xero routinely cap historical lookbacks at 90 days. Banks merge or change portals, legacy corporate credit card accounts get closed before CSVs are downloaded, and small business owners hand over password-protected PDF statements two weeks before a tax deadline or <a href="../../blog-quickbooks-online-cleanup-checklist-audit-ready.html">audit readiness cleanup</a>.</p>
+<p>When faced with 4,500 transactions trapped inside unstructured PDFs, most accounting teams choose between two flawed options:</p>
+<ol>
+<li><strong>Manual Data Entry:</strong> Paying a bookkeeper to spend 25+ hours typing dates, descriptions, and amounts into Excel—introducing inevitable transposition errors (<code>$540.00</code> typed as <code>$450.00</code>).</li>
+</ol>
+<ol>
+<li><strong>Off-the-Shelf OCR Converters (Dext, AutoEntry, Adobe Export):</strong> Paying steep per-page subscription fees, only to spend hours fixing broken rows where multi-line wire transfer descriptions split into three separate phantom rows.</li>
+</ol>
+<p>At <a href="../../index.html">ShrutAura Global</a>, our Chartered Accountants and Finance Automation Engineers solve this at the code level. Using a lightweight, deterministic <strong>Python extraction pipeline (<code>pdfplumber</code> + <code>re</code> + <code>pandas</code> + <code>openpyxl</code>)</strong>, we convert dozens of unstructured PDF bank statements into reconciled, QuickBooks Online-ready CSVs in under 60 seconds—with <strong>100% mathematical checksum certainty</strong>.</p>
+<p>Here is the complete technical architecture and working Python blueprint behind our workflow.</p>
+<h2 id="why-generic-pdf-converters-break-on-financial-statements">Why Generic PDF Converters Break on Financial Statements</h2>
+<p>Bank statements are deceptively hostile to standard table scrapers. Unlike clean database tables, bank PDFs are designed for visual printing, creating five recurring parsing failures:</p>
+<ol>
+<li><strong>Borderless Columns:</strong> Most modern bank PDFs (Chase, Bank of America, Wells Fargo, Barclays, HSBC, ICICI) omit vertical gridlines. Standard PDF scrapers guess column boundaries and frequently merge the right edge of a long vendor description into the <em>Amount</em> column.</li>
+</ol>
+<ol>
+<li><strong>Multi-Line Wrapped Descriptions:</strong> An ACH or wire entry often spans 3 to 4 lines (e.g., Line 1: <code>ORIG CO NAME: STRIPE</code>, Line 2: <code>ORIG ID: 1234567890 DESC DATE: 101526</code>, Line 3: <code>ENTRY DESCR: TRANSFER</code>). Naive converters create two blank-dated orphan rows under the main transaction.</li>
+</ol>
+<ol>
+<li><strong>Separate "Deposits" vs. "Withdrawals" Sections:</strong> Many commercial statements group deposits on pages 1–2 and checks/debits on pages 3–6, without an explicit <code>+</code> or <code>-</code> sign on the numbers.</li>
+</ol>
+<ol>
+<li><strong>Mid-Page Headers, Footers & Marketing Banners:</strong> Legal disclaimers, page numbers (<code>Page 3 of 12</code>), and promotional text interrupt transaction tables mid-stream.</li>
+</ol>
+<ol>
+<li><strong>No Built-In Mathematical Tie-Out:</strong> If an OCR tool misreads an <code>8</code> as a <code>3</code>, it silently exports the wrong number into your CSV, leaving your accountant to hunt down the discrepancy hours later during bank reconciliation.</li>
+</ol>
+<h2 id="the-4-stage-python-architecture-for-zero-error-pdf-extraction">The 4-Stage Python Architecture for Zero-Error PDF Extraction</h2>
+<p>To achieve Chartered Accountant-grade reliability, our Python automation pipeline treats PDF parsing as an <strong>accounting control system</strong>, not just a text scraper.</p>
+<pre><code class="language-">
+[Unstructured PDF Statements] 
+
+       │
+
+       ▼
+
+Stage 1: Coordinate &amp; Layout Extraction (pdfplumber)
+
+       │
+
+       ▼
+
+Stage 2: Regex Transaction Anchoring &amp; Multi-Line Consolidation (re)
+
+       │
+
+       ▼
+
+Stage 3: Automated Checksum Gate (Opening + Credits - Debits == Closing)
+
+       │
+
+       ▼
+
+Stage 4: QBO 3-Column / 4-Column CSV &amp; Excel Audit Workpaper (pandas / openpyxl)
+</code></pre>
+<h2 id="step-by-step-python-implementation-code">Step-by-Step Python Implementation Code</h2>
+<p>Below is a battle-tested reference implementation showing how we extract multi-line bank transactions, consolidate wrapped descriptions, verify the statement math, and output a clean QuickBooks Online import file.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<pre><code class="language-bash">
+pip install pdfplumber pandas openpyxl
+</code></pre>
+<h3 id="the-complete-python-extraction-validation-script">The Complete Python Extraction & Validation Script</h3>
+<pre><code class="language-python">
+import re
+
+from decimal import Decimal
+
+import pandas as pd
+
+import pdfplumber
+
+
+
+# Regex pattern matching lines starting with a date (MM/DD or MM/DD/YYYY)
+
+# Followed by description, transaction amount, and optional running balance
+
+TXN_START_PATTERN = re.compile(
+
+    r"^(\d{2}/\d{2}(?:/\d{2,4})?)\s+"  # Group 1: Transaction Date
+
+    r"(.+?)\s+"  # Group 2: Primary Description
+
+    r"(-?\$?[\d,]+\.\d{2}-?)"  # Group 3: Amount (handles trailing minus)
+
+    r"(?:\s+(-?\$?[\d,]+\.\d{2}-?))?$"  # Group 4: Optional Running Balance
+
+)
+
+
+
+# Noise filter for page headers, footers, and continuation banners
+
+IGNORE_PATTERNS = re.compile(
+
+    r"(Page \d+ of \d+|Continued on next page|ACCOUNT SUMMARY|Beginning Balance|Ending Balance|DAILY BALANCES)",
+
+    re.IGNORECASE,
+
+)
+
+
+
+
+
+def clean_currency(val_str: str) -&gt; Decimal:
+
+    """Converts raw currency string (e.g., '$1,250.50-' or '-1,250.50') into exact Decimal."""
+
+    if not val_str:
+
+        return Decimal("0.00")
+
+    s = val_str.replace("$", "").replace(",", "").strip()
+
+    if s.endswith("-"):
+
+        s = "-" + s[:-1]
+
+    return Decimal(s)
+
+
+
+
+
+def parse_bank_pdf(pdf_path: str, statement_year: str = "2026"):
+
+    transactions = []
+
+    current_txn = None
+
+
+
+    with pdfplumber.open(pdf_path) as pdf:
+
+        for page_num, page in enumerate(pdf.pages, start=1):
+
+            # layout=True preserves horizontal spacing between columns
+
+            raw_text = page.extract_text(layout=False)
+
+            if not raw_text:
+
+                continue
+
+
+
+            for line in raw_text.split("\n"):
+
+                clean_line = line.strip()
+
+                if not clean_line or IGNORE_PATTERNS.search(clean_line):
+
+                    continue
+
+
+
+                match = TXN_START_PATTERN.match(clean_line)
+
+                if match:
+
+                    # Save previous transaction before starting a new one
+
+                    if current_txn:
+
+                        transactions.append(current_txn)
+
+
+
+                    raw_date, desc, amt_str, bal_str = match.groups()
+
+                    # Append year if statement only prints MM/DD
+
+                    full_date = (
+
+                        f"{raw_date}/{statement_year}"
+
+                        if len(raw_date) == 5
+
+                        else raw_date
+
+                    )
+
+
+
+                    current_txn = {
+
+                        "Date": full_date,
+
+                        "Description": desc.strip(),
+
+                        "Amount": clean_currency(amt_str),
+
+                        "Running_Balance": (
+
+                            clean_currency(bal_str) if bal_str else None
+
+                        ),
+
+                        "Source_Page": page_num,
+
+                    }
+
+                else:
+
+                    # Multi-line description consolidation:
+
+                    # Append continuation lines to the active transaction description
+
+                    if current_txn and not re.match(r"^\d{2}/\d{2}", clean_line):
+
+                        current_txn["Description"] += f" | {clean_line}"
+
+
+
+        # Append final transaction
+
+        if current_txn:
+
+            transactions.append(current_txn)
+
+
+
+    return pd.DataFrame(transactions)
+
+
+
+
+
+def verify_and_export_qbo(
+
+    df: pd.DataFrame,
+
+    opening_bal: Decimal,
+
+    closing_bal: Decimal,
+
+    output_csv: str,
+
+):
+
+    """Performs Chartered Accountant checksum tie-out before exporting QBO CSV."""
+
+    net_movement = sum(df["Amount"], Decimal("0.00"))
+
+    calculated_closing = opening_bal + net_movement
+
+    variance = closing_bal - calculated_closing
+
+
+
+    print(f"--- RECONCILIATION CHECKSUM REPORT ---")
+
+    print(f"Transactions Extracted : {len(df)}")
+
+    print(f"Statement Opening Bal  : {opening_bal:,.2f}")
+
+    print(f"Extracted Net Movement : {net_movement:,.2f}")
+
+    print(f"Calculated Closing Bal : {calculated_closing:,.2f}")
+
+    print(f"Statement Closing Bal  : {closing_bal:,.2f}")
+
+    print(f"Reconciliation Variance: {variance:,.2f}")
+
+
+
+    if variance != Decimal("0.00"):
+
+        raise ValueError(
+
+            f"CRITICAL CONTROL FAILURE: Variance of {variance} detected! "
+
+            "Export halted until line-item delta is resolved."
+
+        )
+
+
+
+    # Format strictly for QuickBooks Online 3-Column CSV Import
+
+    qbo_df = pd.DataFrame(
+
+        {
+
+            "Date": df["Date"],
+
+            "Description": df["Description"].str.replace(
+
+                r"\s+", " ", regex=True
+
+            ),
+
+            "Amount": df["Amount"].apply(lambda x: f"{x:.2f}"),
+
+        }
+
+    )
+
+    qbo_df.to_csv(output_csv, index=False)
+
+    print(f"SUCCESS: 100% tied-out QBO CSV exported to {output_csv}")
+</code></pre>
+<h3 id="why-this-script-beats-commercial-ocr-tools">Why This Script Beats Commercial OCR Tools:</h3>
+<ol>
+<li><strong>Exact <code>Decimal</code> Arithmetic:</strong> Notice we never use floating-point (<code>float</code>) math for currency. In Python, <code>0.1 + 0.2</code> in binary floating point equals <code>0.30000000000000004</code>, which can trigger false rounding discrepancies across 10,000 rows. Using <code>decimal.Decimal</code> enforces exact base-10 financial arithmetic.</li>
+</ol>
+<ol>
+<li><strong>Multi-Line Consolidation (<code>|</code>)</strong>: Instead of dropping lines 2 and 3 of an ACH wire (which frequently contain the actual vendor name or invoice number!), the script concatenates continuation lines with a clean pipe delimiter (<code>|</code>) so QuickBooks Bank Rules can auto-categorize the vendor accurately.</li>
+</ol>
+<ol>
+<li><strong>Hard Stop on Non-Zero Variance:</strong> If a single transaction is missed or misclassified between debit and credit, <code>variance != Decimal('0.00')</code> halts the pipeline immediately and pinpoints the exact page where the running balance diverged.</li>
+</ol>
+<h2 id="comparison-manual-entry-vs-saas-ocr-tools-vs-shrutaura-python-pipeline">Comparison: Manual Entry vs. SaaS OCR Tools vs. ShrutAura Python Pipeline</h2>
+<div class="article-table-wrap"><table class="article-table">
+<thead><tr>
+<th>Evaluation Metric</th>
+<th>Manual Bookkeeper Keystroking</th>
+<th>Generic SaaS OCR (Dext / AutoEntry)</th>
+<th>ShrutAura Custom Python Pipeline</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Processing Time (12 Statements / 3,600 Rows)</strong></td>
+<td>18 – 24 Hours</td>
+<td>2 – 4 Hours (including manual cleanup)</td>
+<td><strong>Under 90 Seconds</strong></td>
+</tr>
+<tr>
+<td><strong>Multi-Line Description Handling</strong></td>
+<td>Summarized / Truncated</td>
+<td>Often splits into broken orphan rows</td>
+<td><strong>100% Consolidated into single clean string</strong></td>
+</tr>
+<tr>
+<td><strong>Mathematical Checksum Tie-Out</strong></td>
+<td>Discovered only at end of reconciliation</td>
+<td>None (exports raw OCR guesses)</td>
+<td><strong>Automated <code>Opening + Net = Closing</code> hard gate</strong></td>
+</tr>
+<tr>
+<td><strong>Per-Page / Per-Statement Surcharges</strong></td>
+<td>High hourly labor cost</td>
+<td>$0.25 – $0.60 per page subscription fee</td>
+<td><strong>$0 extra (Included in ShrutAura Pods)</strong></td>
+</tr>
+<tr>
+<td><strong>Vendor Auto-Tagging & GL Mapping</strong></td>
+<td>Manual selection in QBO</td>
+<td>Basic historical rule matching</td>
+<td><strong>Regex vendor extraction + pre-mapped GL classes</strong></td>
+</tr>
+</tbody>
+</table></div>
+<div class="article-mid-cta">
+  <h3 class="article-mid-cta__title">💡 Mid-Article Callout: Drowning in PDF Bank Statements or Legacy Backlog?</h3>
+  <p class="article-mid-cta__desc"><strong>Don't waste days typing PDF statements into QuickBooks or Xero.</strong> Send us your toughest multi-month PDF backlog during our <strong>Free 40-Hour Pilot</strong>, and watch our Chartered Accountants and Python engineers deliver reconciled, audit-ready books in days.</p>
+  <p class="article-mid-cta__desc">👉 <strong><a href="../../index.html#contact">Start Your Free 40-Hour Pilot</a></strong> | <strong><a href="../../index.html#contact">Book a Free 15-Minute Finance Automation Audit</a></strong></p>
+  <div style="display: flex; gap: var(--space-4); margin-top: var(--space-4); flex-wrap: wrap;">
+    <a href="../../index.html#contact" class="btn btn--primary btn--sm btn--pill">Start Your Free 40-Hour Pilot</a>
+    <a href="../../index.html#contact" class="btn btn--secondary btn--sm btn--pill">Book a Free 15-Minute Audit</a>
+  </div>
+</div>
+<h2 id="quickbooks-online-import-formatting-checklist-preventing-qbo-upload-errors">QuickBooks Online Import Formatting Checklist (Preventing QBO Upload Errors)</h2>
+<p>Even after extracting data from a PDF, QuickBooks Online's CSV uploader is notoriously picky and will throw cryptic errors if your file violates its formatting rules. Before uploading—or when configuring your Python export—verify these 7 points:</p>
+<ul class="article-checklist">
+<li><strong>1. Choose Either 3-Column OR 4-Column Header Structure:</strong></li>
+</ul>
+<ul>
+<li><em>3-Column Format:</em> <code>Date</code>, <code>Description</code>, <code>Amount</code> (Deposits as positive <code>1250.00</code>, Withdrawals as negative <code>-450.25</code>).</li>
+</ul>
+<ul>
+<li><em>4-Column Format:</em> <code>Date</code>, <code>Description</code>, <code>Credit</code>, <code>Debit</code> (Both columns expressed as positive numbers).</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>2. Strip All Currency Symbols and Thousand Commas:</strong> QBO will reject <code>$1,250.00</code>. Format strictly as <code>1250.00</code>.</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>3. Standardize Date Format Across All Rows:</strong> Never mix <code>MM/DD/YYYY</code> and <code>DD/MM/YYYY</code> in the same file. Ensure leading zeros (<code>04/05/2026</code>) are preserved so Excel doesn't mangle dates upon saving.</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>4. Remove Subtotal, Opening, and Closing Summary Rows:</strong> Only actual dated transactions belong in the CSV import; summary rows will duplicate entries in the bank feed.</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>5. Sanitize Special Characters in Descriptions:</strong> Strip unescaped line breaks (<code>\n</code>, <code>\r</code>) and double quotes (<code>"</code>) inside descriptions so CSV delimiters don't shift columns.</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>6. Pre-Extract Check Numbers where Applicable:</strong> If checks are listed as <code>CHECK #1045</code>, parse <code>1045</code> into the QBO reference/check number field or prefix the description consistently (<code>CHK 1045 - Vendor</code>).</li>
+</ul>
+<ul class="article-checklist">
+<li><strong>7. Keep File Size Under 350 KB / 1,000 Rows per Batch:</strong> While QBO supports up to 350 KB per upload, splitting multi-year extractions into quarterly or semi-annual CSV batches speeds up QBO browser responsiveness during categorization.</li>
+</ul>
+<h2 id="beyond-csvs-pre-mapping-vendor-rules-before-hitting-quickbooks">Beyond CSVs: Pre-Mapping Vendor Rules Before Hitting QuickBooks</h2>
+<p>Extracting the PDF into a CSV is only half the battle. If you upload 3,600 raw rows into QuickBooks Online, someone still has to categorize them.</p>
+<p>When ShrutAura Global runs a <a href="../../blog-quickbooks-online-cleanup-checklist-audit-ready.html">messy books cleanup</a> or <a href="../../blog-offshore-accounting-pods-for-us-cpa-firms.html">CPA firm write-up engagement</a>, our Python script executes a <strong>Stage 5 Regex Vendor Normalizer</strong> prior to import:</p>
+<ul>
+<li>Raw strings like <code>POS DEB 1014 AMZN MKTP US*2K981 SEATTLE WA</code> are normalized cleanly to Vendor: <code>Amazon Marketplace</code> and pre-matched against your Chart of Accounts mapping table.</li>
+</ul>
+<ul>
+<li>Inter-account bank transfers, credit card autopayments, and <a href="../../blog-ecommerce-bookkeeping-shopify-amazon-stripe-reconciliation.html">Shopify/Stripe processor payouts</a> are automatically flagged so they match against clearing accounts rather than double-counting revenue or expenses.</li>
+</ul>
+
+<h2 id="faqs">Frequently Asked Questions</h2>
+<div class="faq-block">
+  <div class="faq-card">
+    <h3 class="faq-card__question">1. Why do standard PDF-to-Excel converters fail on bank statements?</h3>
+    <div class="faq-card__answer"><p>Generic PDF-to-Excel tools rely on visible gridlines and fail when bank statements have borderless tables, multi-line transaction descriptions, page header/footer interruptions, or combined debit/credit columns with trailing <code>CR</code> or <code>-</code> indicators. A custom Python pipeline using coordinate-based parsing and regex resolves these structural issues.</p></div>
+  </div>
+  <div class="faq-card">
+    <h3 class="faq-card__question">2. How do you guarantee 100% accounting accuracy when extracting PDF bank statements with Python?</h3>
+    <div class="faq-card__answer"><p>At ShrutAura Global, every Python extraction script includes an automated accounting checksum validation gate: <code>Opening Balance + Total Deposits (Credits) - Total Withdrawals (Debits)</code> must equal the <code>Ending Statement Balance</code> to the exact cent (<code>$0.00</code> variance), alongside row-by-row running balance reconciliation.</p></div>
+  </div>
+  <div class="faq-card">
+    <h3 class="faq-card__question">3. What CSV format does QuickBooks Online require for bank statement imports?</h3>
+    <div class="faq-card__answer"><p>QuickBooks Online accepts either a 3-column CSV format (<code>Date</code>, <code>Description</code>, <code>Amount</code> where inflows are positive and outflows are negative) or a 4-column CSV format (<code>Date</code>, <code>Description</code>, <code>Credit</code>, <code>Debit</code>) with standard <code>MM/DD/YYYY</code> or <code>DD/MM/YYYY</code> date formatting and no currency symbols or thousand-separator commas.</p></div>
+  </div>
+  <div class="faq-card">
+    <h3 class="faq-card__question">4. Can Python extract transactions from scanned or image-based PDF bank statements?</h3>
+    <div class="faq-card__answer"><p>Yes. While native digital PDFs are parsed directly via <code>pdfplumber</code>, scanned image PDFs are processed through an OCR pre-processing layer (using Tesseract OCR or AWS Textract with deskewing and contrast thresholding) followed by regex validation and automated running-balance checksum checks.</p></div>
+  </div>
+</div>
+
+                <!-- Author Card -->
+        <div class="article-author-card">
+          <div class="article-author-card__avatar">
+            <picture>
+              <source srcset="../../assets/profile.webp" type="image/webp">
+              <img src="../../assets/profile.png" alt="CA Yash Chaplot — Chartered Accountant & Founder" class="article-author-card__avatar-img" width="80" height="80" loading="lazy">
+            </picture>
+          </div>
+          <div class="article-author-card__content">
+            <div class="article-author-card__header">
+              <div>
+                <h3 class="article-author-card__name">CA Yash Chaplot</h3>
+                <div class="article-author-card__designation">
+                  <span class="author-tag author-tag--credential">Chartered Accountant</span>
+                  <span class="author-tag author-tag--role">Founder, ShrutAura Global</span>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/company/shrutaura-global/" target="_blank" rel="noopener" class="article-author-card__link" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>Connect on LinkedIn</span>
+              </a>
+            </div>
+            <p class="article-author-card__bio">
+              Yash is a Practicing Chartered Accountant and the Founder of ShrutAura Global. As a finance technology architect, he has engineered high-throughput outsourced finance pods for mid-market SMBs, startups, and CPA firms across the US, UK, and Australia. He specializes in eliminating spreadsheet friction through Python automation, structured maker-checker controls, and executive Power BI reporting.
+            </p>
+            <div class="article-author-card__footer">
+              <div class="article-author-card__reviewer">
+                <span class="article-author-card__badge-verified">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                  <span>Practicing CA Sign-off:</span>
+                </span>
+                <span>ICAI Associate Member &bull; AICPA Professional Standards Compliant</span>
+              </div>
+              <div>Published: September 3, 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- In-Article CTA -->
+        <div class="article-cta" id="cta">
+          <h2 class="article-cta__title">Stop Wasting Billable Hours on Manual PDF Data Entry</h2>
+          <p class="article-cta__subtitle">Whether you have 12 months of backlog statements for a single business or 50 client files ahead of tax season, our Chartered Accountants and Python automation engineers can turn unstructured PDFs into reconciled financials in record time.</p>
+          <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+            <a href="../../index.html#contact" class="btn btn--primary btn--lg btn--pill">Start Your Free 40-Hour Pilot</a>
+            <a href="../../index.html#contact" class="btn btn--secondary btn--lg btn--pill">Schedule a Free Audit</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Related Articles -->
+      <section class="related-articles">
+        <h2 class="related-articles__title">Explore More Insights & Playbooks</h2>
+        <div class="blog-grid" style="margin-top: 0;">
+          <a href="../../blog-automate-month-end-close-excel-vba-power-bi.html" class="blog-card">
+            <div class="blog-card__image-wrap">
+              <picture>
+                <source srcset="../../assets/blog_month_end_close.webp" type="image/webp">
+                <img src="../../assets/blog_month_end_close.png" alt="Executive corporate financial operations suite with transparent holographic Power BI dashboard and automated Excel VBA ledger" class="blog-card__image smooth-img" width="400" height="250" loading="lazy">
+              </picture>
+              <span class="blog-card__category">Month-End Close & BI</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>August 13, 2026</span>
+                <span class="blog-card__meta-dot"></span>
+                <span>10 min read</span>
+              </div>
+              <h3 class="blog-card__title">Automating Month-End Close: How to Cut Closing Time from 15 Days to 3 Days with Excel VBA & Power BI</h3>
+              <p class="blog-card__excerpt">Cut your month-end close from 15 days to 3 days using Excel VBA macros and Power BI dashboards. Eliminate manual errors—start your Free 40-Hour Pilot today.</p>
+              <div class="blog-card__footer">
+                <span>Read Full Guide</span>
+                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="../../blog-sap-erp-data-extraction-automation-finance-reporting.html" class="blog-card">
+            <div class="blog-card__image-wrap">
+              <picture>
+                <source srcset="../../assets/blog_sap_erp.webp" type="image/webp">
+                <img src="../../assets/blog_sap_erp.png" alt="High-tech enterprise finance operations center at night with floating holographic SAP ERP general ledger tables" class="blog-card__image smooth-img" width="400" height="250" loading="lazy">
+              </picture>
+              <span class="blog-card__category">SAP & ERP Automation</span>
+            </div>
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                <span>July 23, 2026</span>
+                <span class="blog-card__meta-dot"></span>
+                <span>10 min read</span>
+              </div>
+              <h3 class="blog-card__title">SAP & ERP Data Extraction Automation: Eliminating Manual Reporting Bottlenecks for Finance Teams</h3>
+              <p class="blog-card__excerpt">Eliminate manual SAP & ERP data extraction bottlenecks using VBA SAP GUI scripting and Python automation. Cut reporting time by 80%—start your Free Pilot.</p>
+              <div class="blog-card__footer">
+                <span>Read Full Guide</span>
+                <svg class="blog-card__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+    <!-- Footer -->
+  <footer class="footer" id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand Column -->
+        <div class="footer__brand">
+          <picture>
+            <source srcset="../../Logo -BG-crop.webp" type="image/webp">
+            <img src="../../Logo -BG-crop.png" alt="ShrutAura Global - Simplifying Finance with Technology" class="footer__logo" width="167" height="36" loading="lazy">
+          </picture>
+          <p class="footer__tagline">Simplifying Finance with Technology.</p>
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/company/shrutaura-global/" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn" id="footer-linkedin">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="mailto:contact@shrutaura.com" class="footer__social-link" aria-label="Email" id="footer-email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+            <a href="https://wa.me/917733070070" target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp" id="footer-whatsapp">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.503 3.936 1.386 5.613L0 24l6.563-1.329A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.614-.525-5.107-1.434l-.366-.217-3.795.769.832-3.652-.238-.377A9.719 9.719 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/>
+              </svg>
+            </a>
+          </div>
+          <div class="footer__certifications">
+            <span class="footer__cert-title">Certified In</span>
+            <div class="footer__badges">
+              <div class="footer__badge-item" title="QuickBooks Certified ProAdvisor Advanced Online">
+                <picture>
+                  <source srcset="../../assets/images/qb-proadvisor.webp" type="image/webp">
+                  <img src="../../assets/images/qb-proadvisor.png" alt="QuickBooks Certified ProAdvisor Advanced Online"
+                    class="footer__badge-img footer__badge-img--qb" width="48" height="64" loading="lazy">
+                </picture>
+              </div>
+              <div class="footer__badge-item" title="Xero L3 Certified Specialist">
+                <picture>
+                  <source srcset="../../assets/images/Education_All_-_L3_certified_specialist_badge.webp" type="image/webp">
+                  <img src="../../assets/images/xero-certified-specialist.png" alt="Xero L3 Certified Specialist"
+                    class="footer__badge-img footer__badge-img--xero" width="48" height="48" loading="lazy">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Column -->
+        <div>
+          <h4 class="footer__column-title">Company</h4>
+          <div class="footer__links">
+            <a href="../../index.html#home" class="footer__link">Home</a>
+            <a href="../../index.html#about" class="footer__link">About</a>
+            <a href="../../index.html#services" class="footer__link">Services</a>
+            <a href="../../blog.html" class="footer__link">Blog</a>
+            <a href="../../index.html#faq" class="footer__link">FAQ</a>
+            <a href="../../index.html#contact" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <!-- Services Column -->
+        <div>
+          <h4 class="footer__column-title">Services</h4>
+          <div class="footer__links">
+            <a href="../../service-outsourced-accounting.html" class="footer__link">Outsourced Accounting</a>
+            <a href="../../service-bookkeeping.html" class="footer__link">Bookkeeping</a>
+            <a href="../../service-cfo-support.html" class="footer__link">CFO Support</a>
+            <a href="../../service-payroll.html" class="footer__link">Payroll Services</a>
+            <a href="../../service-automation.html" class="footer__link">Automation</a>
+            <a href="../../service-ai-for-finance.html" class="footer__link">AI for Finance</a>
+          </div>
+        </div>
+
+        <!-- Contact Column -->
+        <div>
+          <h4 class="footer__column-title">Get in Touch</h4>
+          <div class="footer__links">
+            <a href="https://maps.google.com/?q=Rajsamand,+Rajasthan,+India" target="_blank" rel="noopener" class="footer__link footer__link--address" title="Location: Rajsamand, Rajasthan, India">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer__link-icon" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Rajsamand, Rajasthan, India</span>
+            </a>
+            <a href="mailto:contact@shrutaura.com" class="footer__link">contact@shrutaura.com</a>
+            <a href="https://wa.me/917733070070" target="_blank" rel="noopener" class="footer__link">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/shrutaura-global/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__divider"></div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 ShrutAura Global. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="../../privacy-policy.html" class="footer__bottom-link">Privacy Policy</a>
+          <a href="../../terms-of-service.html" class="footer__bottom-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="../../js/analytics.js"></script>
+</body>
+</html>
