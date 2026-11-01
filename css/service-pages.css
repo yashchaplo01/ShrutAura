@@ -782,3 +782,125 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Service Page Contact Card Component
+   ══════════════════════════════════════════════════════════════════════════ */
+.contact-card {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #0B0C1A;
+  background: linear-gradient(145deg, #121429 0%, #0B0C1A 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-2xl, 24px);
+  padding: 56px 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 0 60px rgba(63, 81, 181, 0.12),
+    0 24px 48px rgba(0, 0, 0, 0.4);
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(63, 81, 181, 0.22) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-card::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card__header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 40px auto;
+}
+
+.contact-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl, 2rem);
+  font-weight: var(--weight-bold, 700);
+  color: var(--color-white, #FFFFFF);
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.contact-card__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-base, 1rem);
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-form__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4, 16px);
+}
+
+.contact-form__col .contact-form__group {
+  margin-bottom: 0;
+}
+
+.contact-form__checkboxes {
+  background: rgba(10, 11, 25, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 8px);
+  padding: 8px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 12px;
+}
+
+@media (max-width: 900px) {
+  .contact-card {
+    padding: 40px 28px;
+  }
+
+  .contact-card__title {
+    font-size: 1.65rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .contact-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .contact-form__checkboxes {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card__title {
+    font-size: 1.4rem;
+  }
+
+  .contact-form__submit-btn {
+    width: 100%;
+    min-width: unset;
+    padding: 14px 20px;
+  }
+}
